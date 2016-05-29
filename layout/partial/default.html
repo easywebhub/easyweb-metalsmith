@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <!-- PAGE TITLE -->
-    <title><%= @getPreparedTitle() %></title>
+    <title>{{title}}</title>
     <!-- MAKE IT RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="description" content="<%= @getDescription() %>">
-    <meta name="author" content="">
+    <meta name="description" content="{{site.description}}">
+    <meta name="author" content="{{site.author}}">
     <meta name="keywords" content="">
     <!-- FAVICON -->
     <!--<link rel="shortcut icon" href="images/favicon.png" />-->
@@ -34,17 +34,26 @@
 
     <div id="page">
         <!-- START HEADER -->
-        <header id="header" class="<%= @bodyClass() %> with-separation-bottom">
+        <header id="header" class="big with-separation-bottom">
             <!-- POINTER ANIMATED -->
             <canvas id="header-canvas"></canvas>
-            <%- @partial('top-nav') %>
-            <%- @partial('navigation') %>
+            {{#block "top-nav"}}
+              {{> top-nav}}
+            {{/block}}
 
-            <% if @document.isIndex: %>
+            {{#block "navigation"}}
+              {{> navigation}}
+            {{/block}}
+
+            {{#block "slider"}}
+              {{{contents}}}
+            {{/block}}
+
+            <!-- <% if @document.isIndex: %>
               <%- @partial('slider') %>
             <% else: %>
               <%- @partial('bg-detail') %>
-            <% end %>
+            <% end %> -->
 
         </header>
         <!-- END HEADER -->
@@ -119,7 +128,56 @@
       <a href="#" id="scroll-top" class="fadeInRight animate-me"><i class="fa fa-angle-double-up"></i></a>
   </div>
 
-  <%- @getBlock("scripts").add(["/js/jquery-1.11.1.min.js","/js/plugins.js","/js/custom.js"]).toHTML() %>
+  <script >(function(){
+      /* Did we just livereload? */
+      var log = !!(localStorage && console && console.log && true);
+      if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+      localStorage.removeItem('/docpad-livereload/reloaded');
+      console.log('LiveReload completed at', new Date())
+      }
+
+      /* Listen for the regenerated event and perform a reload of the page when the event occurs */
+      var listen = function(){
+      var primus = new Primus('/docpad-livereload');
+      primus.on('data', function(data){
+        if ( data && data.message ) {
+          if ( data.message === 'generateBefore' ) {
+            if ( log ) {
+              console.log('LiveReload started at', new Date());
+            }
+            if ( typeof document.getElementsByTagName !== 'undefined' ) {
+      document.getElementsByTagName('html')[0].className += ' wait';
+      }
+          }
+          else if ( data.message === 'generateAfter' ) {
+            if ( log ) {
+              localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+            }
+            document.location.reload();
+          }
+        }
+      });
+      };
+      /* Inject socket into our page */
+      var inject = function(){
+      var t = document.createElement('script');
+      t.type = 'text/javascript';
+      t.async = 'async';
+      t.src = '/docpad-livereload/primus.js';
+      t.onload = listen;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+      };
+      if ( typeof Primus !== 'undefined' ) {
+        listen();
+      } else {
+        inject();
+      }
+      })();</script>
+      <script defer="defer"  src="/js/jquery-1.11.1.min.js"></script>
+      <script defer="defer"  src="/js/plugins.js"></script>
+      <script defer="defer"  src="/js/custom.js"></script>
+
 
 
 </body>
