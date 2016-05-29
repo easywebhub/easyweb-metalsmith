@@ -1,7 +1,252 @@
 ---json
 {
-  "title": "EasyWeb Metalsmith",
+  "title": "Trang chủ",
   "layout": "index.html",
 }
 ---
 
+<div class="container">
+        <!-- SKILLS -->
+        <h2 class="with-breaker animate-me fadeInUp">
+    Dịch vụ <span>Việc chúng tôi làm tốt nhất !</span>
+  </h2>
+        <table id="skills-container" class="skills">
+            <tr class="skills-row">
+                <td class="skill animate-me zoomIn">
+                    <h4><i class="fa fa-star-o"></i>Rich Internet Applications</h4>
+                    <p>Với nhiều năm kinh nghiệm tư vấn & phát triển giải pháp doanh nghiệp phức tạp trên nền WEB, VinaAS có thể tạo ra những ứng dụng WEB mạnh mẽ có khả năng tương tác cao, nghiệp vụ phức tạp, thông minh và thân thiện. Sản phẩm của VinaAS được thiết kế giúp doanh nghiệp tối ưu các hoạt động quản lý, nâng cao hiệu xuất, tăng trưởng kinh doanh và giảm thiểu chi phí.</p>
+                </td>
+                <td class="skill animate-me zoomIn">
+                    <h4><i class="fa fa-envelope-o"></i>Data Analysis & Calculation</h4>
+                    <p>VinaAS cung cấp dịch vụ phân tích dữ liệu, mô hình hóa, xử lý số liệu đo đạc, tính toán tự động... giúp giải quyết các vấn để phức tạp chuyên biệt trong các ngành dầu khí, xây dựng một cách nhanh chóng, chính xác. Với đội ngũ nhân sự có trình độ chuyên môn cao, VinaAS đã phát triển thành công các sản phẩm chuyên biệt, đặc thù cho các lĩnh vực đòi hỏi độ phức tạp và tính chính xác cao.</p>
+                </td>
+                <td class="skill animate-me zoomIn">
+                    <h4><i class="fa fa-line-chart"></i>Custome Software</h4>
+                    <p>Cho dù bạn đang có một ý tưởng khởi nghiệp cần khái niệm hóa với hình ảnh trực quan để thuyết phục các nhà đầu tư, hay bạn đang cần một giải pháp phần mềm hoàn chỉnh dành riêng cho công ty bạn trong khi các giải pháp trên thị trường không phù hợp với quy trình và yêu cầu của công ty... VinaAS sẵn sàng cung cấp các dịch vụ phát triển phần mềm đầy đủ cũng như theo từng giai đoạn của dự án</p>
+                </td>
+            </tr>
+
+        </table>
+        <div class="skill-button center animate-me fadeInUp">
+            <a href="skills.html" class="btn btn-default"><i class="fa fa-trophy"></i> Xem thêm</a>
+        </div>
+
+        <!--PORTFOLIO -->
+        <h2 class="with-breaker animate-me fadeInUp">
+    Dự án <span>Đã và đang thực hiện thành công!</span>
+  </h2>
+    </div>
+
+    <div id="portfolio-container" class="with-separation-bottom with-separation-top">
+      <% if @getCollection('projects').length >= 5 : %>
+            <% for soluong in [0...6]: %>
+              <% project = @getCollection('projects').toJSON()[soluong] %>
+              <figure class="portfolio-item effect-sadie">
+                  <img src="<%= project.images[0].url %>" alt="project.images[0].alt"/>
+                  <figcaption>
+                      <h4><%= project.title %></h4>
+                      <p><%= project.description %></p>
+                      <a href="<%= project.url %>">View more</a>
+                  </figcaption>
+              </figure>
+            <% end %>
+            <% else: %>
+            <% for soluong in [0...@getCollection('projects').length]: %>
+              <% project = @getCollection('projects').toJSON()[soluong] %>
+              <figure class="portfolio-item effect-sadie">
+                  <img src="<%= project.images[0].url %>" alt="project.images[0].alt"/>
+                  <figcaption>
+                      <h4><%= project.title %></h4>
+                      <p><%= project.description %></p>
+                      <a href="<%= project.url %>">View more</a>
+                  </figcaption>
+              </figure>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="portfolio-button center animate-me zoomIn">
+            <a href="sanpham.html" class="btn btn-default"><i class="fa fa-suitcase"></i> Xem thêm</a>
+        </div>
+
+        <!-- CUSTOM CONTAINER -->
+            <section class="custom-section-container with-separation-bottom with-separation-top">
+                <div class="container">
+                    <div class="custom-section-text">
+                        <h2 class="animate-me fadeInLeft">Xin chào, có phải bạn cần tư vấn, dùng thử sản phẩm?</h2>
+                        <p class="animate-me fadeInLeft">Chúng tôi sẵn sàng hỗ trợ, tư vấn khách hàng 24/7 - Bạn hãy liên lạc ngay khi cần, chúng tôi luôn ở đây</p>
+
+                    </div>
+                    <div class="custom-section-buttons">
+
+                        <a href="page.html" class="btn btn-default animate-me fadeInRight"><i class="fa fa-book"></i> Liên hệ ngay</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                    <!-- COMMENTS SHORTCODEs -->
+                    <h2 class="with-breaker animate-me fadeInUp">
+    		  			Tin tức<span>Chia sẽ kiến thức.</span>
+    	  			</h2>
+                </div>
+                <div id="blog-container" class="with-separation-bottom with-separation-top animate-me fadeIn">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <!-- POST -->
+                            <li class="blog-post">
+                                <!-- THUMBNAIL IMAGE -->
+                                <div class="blog-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="images/blog/01.png" alt="Blog Header Image">
+                                    </a>
+                                </div>
+                                <!-- POST CONTENT -->
+                                <div class="blog-content">
+                                    <a href="blog-single.html" class="blog-post-title"><h2>Post Name 1</h2></a>
+                                    <ul class="post-metadatas list-inline">
+                                        <li><i class="fa fa-clock-o"></i> November 25, 2015</li>
+                                        <li><i class="fa fa-comments-o"></i>  <a href="blog-single.html">4 comments</a>
+                                        </li>
+                                    </ul>
+                                    <p class="blog-sum-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis vulputate elit eu malesuada. Nullam magna quam, maximus...</p>
+                                    <div class="blog-button">
+                                        <a href="blog-single.html" class="btn btn-default"><i class="fa fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- POST -->
+                            <li class="blog-post">
+                                <!-- THUMBNAIL IMAGE -->
+                                <div class="blog-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="images/blog/02.png" alt="Blog Header Image">
+                                    </a>
+                                </div>
+                                <!-- POST CONTENT -->
+                                <div class="blog-content">
+                                    <a href="blog-single.html" class="blog-post-title"><h2>Post Name 2</h2></a>
+                                    <ul class="post-metadatas list-inline">
+                                        <li><i class="fa fa-clock-o"></i> November 20, 2015</li>
+                                        <li><i class="fa fa-comments-o"></i>  <a href="blog-single.html">32 comments</a>
+                                        </li>
+                                    </ul>
+                                    <p class="blog-sum-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis vulputate elit eu malesuada. Nullam magna quam, maximus...</p>
+                                    <div class="blog-button">
+                                        <a href="blog-single.html" class="btn btn-default"><i class="fa fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- POST -->
+                            <li class="blog-post">
+                                <!-- THUMBNAIL IMAGE -->
+                                <div class="blog-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="images/blog/03.png" alt="Blog Header Image">
+                                    </a>
+                                </div>
+                                <!-- POST CONTENT -->
+                                <div class="blog-content">
+                                    <a href="blog-single.html" class="blog-post-title"><h2>Post Name 3</h2></a>
+                                    <ul class="post-metadatas list-inline">
+                                        <li><i class="fa fa-clock-o"></i> November 12, 2015</li>
+                                        <li><i class="fa fa-comments-o"></i>  <a href="blog-single.html">3 comments</a>
+                                        </li>
+                                    </ul>
+                                    <p class="blog-sum-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis vulputate elit eu malesuada. Nullam magna quam, maximus...</p>
+                                    <div class="blog-button">
+                                        <a href="blog-single.html" class="btn btn-default"><i class="fa fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- POST -->
+                            <li class="blog-post">
+                                <!-- THUMBNAIL IMAGE -->
+                                <div class="blog-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="images/blog/04.png" alt="Blog Header Image">
+                                    </a>
+                                </div>
+                                <!-- POST CONTENT -->
+                                <div class="blog-content">
+                                    <a href="blog-single.html" class="blog-post-title"><h2>Post Name 4</h2></a>
+                                    <ul class="post-metadatas list-inline">
+                                        <li><i class="fa fa-clock-o"></i> October 19, 2015</li>
+                                        <li><i class="fa fa-comments-o"></i>  <a href="blog-single.html">1 comment</a>
+                                        </li>
+                                    </ul>
+                                    <p class="blog-sum-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis vulputate elit eu malesuada. Nullam magna quam, maximus...</p>
+                                    <div class="blog-button">
+                                        <a href="blog-single.html" class="btn btn-default"><i class="fa fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- POST -->
+                            <li class="blog-post">
+                                <!-- THUMBNAIL IMAGE -->
+                                <div class="blog-thumbnail">
+                                    <a href="blog-single.html">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </a>
+                                </div>
+                                <!-- POST CONTENT -->
+                                <div class="blog-content">
+                                    <a href="blog-single.html" class="blog-post-title"><h2>Post Name 5</h2></a>
+                                    <ul class="post-metadatas list-inline">
+                                        <li><i class="fa fa-clock-o"></i> October 8, 2015</li>
+                                        <li><i class="fa fa-comments-o"></i>  <a href="blog-single.html">32 comments</a>
+                                        </li>
+                                    </ul>
+                                    <p class="blog-sum-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis vulputate elit eu malesuada. Nullam magna quam, maximus...</p>
+                                    <div class="blog-button">
+                                        <a href="blog-single.html" class="btn btn-default"><i class="fa fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blog-button center animate-me zoomIn">
+                    <a href="blog.html" class="btn btn-default"><i class="fa fa-comments-o"></i> Our Blog</a>
+                </div>
+
+                <div class="container">
+                    <!-- PARTNERS -->
+                    <h2 class="with-breaker animate-me fadeInUp">
+    		  			Khách hàng<span>Cảm ơn sử dụng dịch vụ chúng tôi</span>
+    	  			</h2>
+                    <div id="partners-slider" class="flexslider">
+                        <ul class="slides">
+                            <li class="partners-slide">
+                                <a href="#">
+                                    <img src="images/partners/01.jpg" alt="Partner Logo">
+                                </a>
+
+                            </li>
+                            <li class="partners-slide">
+                               <a href="#">
+                                  <img src="images/partners/02.jpg" alt="Partner Logo">
+                               </a>
+
+                            </li>
+                            <li class="partners-slide">
+                               <a href="#">
+                                  <img src="images/partners/03.jpg" alt="Partner Logo">
+                               </a>
+
+                            </li>
+                            <li class="partners-slide">
+                               <a href="#">
+                                  <img src="images/partners/04.jpg" alt="Partner Logo">
+                               </a>
+
+                            </li>
+                            <li class="partners-slide">
+                               <a href="#">
+                                    <img src="images/partners/05.jpg" alt="Partner Logo">
+                               </a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+            </div>
