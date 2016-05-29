@@ -1,3 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- PAGE TITLE -->
+    <title><%= @getPreparedTitle() %></title>
+    <!-- MAKE IT RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="<%= @getDescription() %>">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <!-- FAVICON -->
+    <!--<link rel="shortcut icon" href="images/favicon.png" />-->
+
+    <style >html.wait {
+    	cursor: wait !important;
+    	opacity: 0;
+    	transition: opacity 0.5s ease;
+    }</style>
+    <link  rel="stylesheet" href="/css/bootstrap.min.css" /><link  rel="stylesheet" href="/css/animate.min.css" /><link  rel="stylesheet" href="/css/font-awesome.min.css" /><link  rel="stylesheet" href="/css/font-awesome.min.css" /><link  rel="stylesheet" href="/style.css" /><link  rel="stylesheet" href="/css/options.css" /><link  rel="stylesheet" href="/css/responsive.css" />
+
+   <!-- FONTS -->
+   <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="page">
+        <!-- START HEADER -->
+        <header id="header" class="<%= @bodyClass() %> with-separation-bottom">
+            <!-- POINTER ANIMATED -->
+            <canvas id="header-canvas"></canvas>
+            <%- @partial('top-nav') %>
+            <%- @partial('navigation') %>
+
+            <% if @document.isIndex: %>
+              <%- @partial('slider') %>
+            <% else: %>
+              <%- @partial('bg-detail') %>
+            <% end %>
+
+        </header>
+        <!-- END HEADER -->
+
+        <!-- START MAIN CONTAINER -->
+        <div class="main-container">
+
 {{#block "main"}}
   {{{contents}}}
 {{/block}}
+
+<!-- START FOOTER -->
+      <footer id="footer" class="with-separation-top">
+          <aside id="widgets" class="container">
+              <div class="row">
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInLeft">
+                      <img src="/images/logo-footer.png" id="footer-logo" alt="Logo footer">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper felis pulvinar neque pharetra auctor. Donec vel erat pretium, interdum justo sed, mollis tortor.</p>
+                  </div>
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInUp">
+                      <h4>Danh mục</h4>
+                      <ul>
+                          <li><a href="index.html">Home</a>
+                          </li>
+                          <li><a href="portfolio.html">Portfolio</a>
+                          </li>
+                          <li><a href="blog.html">Blog</a>
+                          </li>
+                          <li><a href="about.html">About Us</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInRight">
+                      <h4>Liên hệ</h4>
+                      <ul class="contact-informations">
+                          <li class="contact-address">305 Hồng Lạc, Phường 10, Quận Tân Bình, TP Hồ Chí Minh </li>
+                          <li class="contact-phone">01999010101 - contact@vinaas.com </li>
+                      </ul>
+                      <ul class="widget-social">
+                          <!-- ALL ICONS AVAILABLE ->http://fortawesome.github.io/Font-Awesome/icons/#brand-->
+                          <li><a href="#"><i class="fa fa-facebook"></i></a>
+                          </li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li><a href="#"><i class="fa fa-skype"></i></a>
+                          </li>
+                      </ul>
+                      <a href="contact.html" class="btn btn-default"><i class="fa fa-envelope-o"></i> Contact Form</a>
+                  </div>
+              </div>
+          </aside>
+          <div id="copyright" class="animate-me fadeInUp">
+              <div class="container">
+                  <p>&#169; 2014. Công ty TNHH Phần mềm Tiên Tiến Việt Nam.</p>
+                  <!-- <ul id="footer-navigation">
+                      <li><a href="page.html">Terms of Use</a>
+                      </li>
+                      <li><a href="page.html">Privacy Policy</a>
+                      </li>
+                      <li><a href="contact.html">Contact Us</a>
+                      </li>
+                  </ul> -->
+              </div>
+          </div>
+      </footer>
+      <!-- END FOOTER -->
+
+      <!-- SCROLL TOP -->
+      <a href="#" id="scroll-top" class="fadeInRight animate-me"><i class="fa fa-angle-double-up"></i></a>
+  </div>
+
+  <%- @getBlock("scripts").add(["/js/jquery-1.11.1.min.js","/js/plugins.js","/js/custom.js"]).toHTML() %>
+
+
+</body>
+</html>
