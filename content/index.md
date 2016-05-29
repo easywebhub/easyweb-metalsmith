@@ -2,6 +2,7 @@
 {
   "title": "Trang chủ",
   "layout": "index.html",
+  "homePage" : true
 }
 ---
 

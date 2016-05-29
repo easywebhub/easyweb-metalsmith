@@ -34,7 +34,12 @@
 
     <div id="page">
         <!-- START HEADER -->
-        <header id="header" class="big with-separation-bottom">
+        {{#if homePage}}
+          <header id="header" class="big with-separation-bottom">
+        {{else}}
+          <header id="header" class="small with-separation-bottom">
+        {{/if}}
+
             <!-- POINTER ANIMATED -->
             <canvas id="header-canvas"></canvas>
             {{#block "top-nav"}}
@@ -45,9 +50,16 @@
               {{> navigation}}
             {{/block}}
 
-            {{#block "slider"}}
-              {{{contents}}}
-            {{/block}}
+            {{#if homePage}}
+              {{#block "slider"}}
+                {{> slider}}
+              {{/block}}
+            {{else}}
+              {{#block "slider"}}
+                {{> bg-detail}}
+              {{/block}}
+            {{/if}}
+
 
             <!-- <% if @document.isIndex: %>
               <%- @partial('slider') %>
