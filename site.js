@@ -18,7 +18,7 @@ const site = {
     // global metadata của site
     metadata: {
         url: "http://vinaas.com",
-        ref-url : "",
+        ref_url : "",
         title: "Công ty TNHH Phần Mềm Tiên Tiến Việt Nam",
         author: "Desmond create, Baotnq edit",
         description: "To make something special you just have to believe it's special!",
