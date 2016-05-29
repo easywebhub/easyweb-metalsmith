@@ -17,15 +17,17 @@ const site = {
 
     // global metadata của site
     metadata: {
-        url: "http://vinaas.com",
-        ref_url : "",
-        title: "Công ty TNHH Phần Mềm Tiên Tiến Việt Nam",
-        author: "Desmond create, Baotnq edit",
-        description: "To make something special you just have to believe it's special!",
-        email: "contact@vinaas.com",
-        favicon: "/img/favicon.png",
-        logo: "/img/favicon.png",
-        cover: "/img/favicon.png",
+        site: {
+          url: "http://vinaas.com",
+          ref_url : "",
+          title: "Công ty TNHH Phần Mềm Tiên Tiến Việt Nam",
+          author: "Desmond create, Baotnq edit",
+          description: "To make something special you just have to believe it's special!",
+          email: "contact@vinaas.com",
+          favicon: "/img/favicon.png",
+          logo: "/img/favicon.png",
+          cover: "/img/favicon.png",
+        },
         navigation: [
           {
             name: 'Trang chủ',
