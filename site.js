@@ -17,7 +17,14 @@ const site = {
 
     // global metadata của site
     metadata: {
-        url: 'http://handy.themes.zone'
+      site: {
+        title: "Baotnq điều chỉnh",
+        description: "Good morning",
+        generator: "EasyWeb Metalsmith",
+        ref_domain: "http://handy.themes.zone",
+        author: "arimal Satyal",
+        keywords: "Neustadt, parimalsatyal, Parimal Satyal"
+      }
     }
 };
 
@@ -79,9 +86,9 @@ site.metalsmith = {
         'relative': false
     },
     'metalsmith-collections':   {
-        '_enable': false,
+        '_enable': true,
         'items':   {
-            'pattern': 'items/**/*.md',
+            'pattern': 'content/items/**/*.md',
             'sortBy':  'date',
             'reverse': true
         }
