@@ -19,7 +19,7 @@ const site = {
     metadata: {
         site: {
           url: "http://vinaas.com",
-          ref_url : "",
+          ref_url : "http://demo.easywebhub.com/website-vinaas",
           title: "Công ty TNHH Phần Mềm Tiên Tiến Việt Nam",
           author: "Desmond create, Baotnq edit",
           description: "To make something special you just have to believe it's special!",
