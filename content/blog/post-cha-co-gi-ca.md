@@ -1,8 +1,9 @@
 ---json
 {
-"title": "post-cha-co-gi-ca-dac-biet",
+"title": "Bài viết nằm trong phần blog",
 "url": "test-post-1",
 "description": "post-cha-co-gi-ca",
+"collection" : "baiviet",
 "layout": "blog-post.html",
 "date": "2015-11-04",
 "draft": "false"

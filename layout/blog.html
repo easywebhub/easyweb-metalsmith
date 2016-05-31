@@ -2,11 +2,14 @@
   {{#content "main"}}
 
     <h1>Blog page {{pagination.index}}</h1>
+    {{#each collections.baiviet}}
+      <h3> <a href="/{{path}}" >{{this.title}}</a>  </h3>
+    {{/each}}
 
     <ul>
     {{#each pagination.files}}
       <li>
-        <h2><a href="/{{path}}" rel="bookmark">{{title}}  {{date}}</a></h2>
+        <h2><a href="/{{path}}" rel="bookmark">{{ title }} +++ {{date}}</a></h2>
         {{{this.excerpt}}}
       </li>
     {{/each}}
