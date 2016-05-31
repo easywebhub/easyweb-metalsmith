@@ -6,10 +6,10 @@
 
 #### Sử dụng một trong các câu lệnh dưới
 ```js
- - npm run watch      // chạy và kiểm tra website trên máy cá nhân
- - npm run watch-prod // chạy và kiểm tra website trước khi upload lên server
- - npm run build      // build để chạy máy cá nhân
- - npm run build-prod // build để chạy trên server
+ * npm run watch      // chạy và kiểm tra website trên máy cá nhân
+ * npm run watch-prod // chạy và kiểm tra website trước khi upload lên server
+ * npm run build      // build để chạy máy cá nhân
+ * npm run build-prod // build để chạy trên server
 ```
 
 Đây là base đơn giản metalsmith, mọi cấu hình đều nằm trong file site.js
