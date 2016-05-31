@@ -1,15 +1,15 @@
-### gulp-metalsmith
+### Hướng dẫn sử dụng source EasyWeb Metalsmith
 #### Cài đặt
-* clone project
+* clone project (mặc định là branch master)
 * npm install
 * bower install (nếu project sử dụng bower để quản lý frontend library)
 
-#### Sử dụng
+#### Sử dụng một trong các câu lệnh dưới
 ```js
-npm run build      // build chế độ development
-npm run watch      // watch chế độ development
-npm run build-prod // build chế độ production
-npm run watch-prod // watch chế độ production
+ * npm run watch      // chạy và kiểm tra website trên máy cá nhân
+ * npm run watch-prod // chạy và kiểm tra website trước khi upload lên server
+ * npm run build      // build để chạy máy cá nhân
+ * npm run build-prod // build để chạy trên server
 ```
 
 Đây là base đơn giản metalsmith, mọi cấu hình đều nằm trong file site.js
