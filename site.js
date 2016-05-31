@@ -59,11 +59,52 @@ site.metalsmith = {
     'metalsmith-drafts':        {
         '_enable': false
     },
+    'metalsmith-permalinks':    {
+        '_enable':  false,
+        'pattern':  ':collection/:title',
+        'relative': false
+    },
     'metalsmith-matters':       {
         '_enable': true,
         'delims':  ['---json', '---'],
         'options': {
             'lang': 'json'
+        }
+    },
+    'metalsmith-collections':   {
+        '_enable': true,
+        // collection theo file pattern + test limit
+        'blog':    {
+            'pattern': 'blog/**/*.md',
+            'sortBy':  'date',
+            'reverse': true,
+            'limit':   2
+        },
+        // collection theo key trong metadata `"collection": "baiviet"`
+        'baiviet': {
+            'sortBy':  'date',
+            'reverse': true
+        }
+    },
+    'metalsmith-pagination':    {
+        '_enable': true,
+        'blog':    {
+            'perPage':   1,
+            'layout':    'blog.html',
+            'first':     'blog/index.html',
+            'path':      'blog/:num/index.html',
+            'noPageOne': true
+        },
+        // test filter
+        'baiviet': {
+            'perPage':   1,
+            'layout':    'blog.html',
+            'first':     'baiviet/index.html',
+            'path':      'baiviet/:num/index.html',
+            'filter':    meta => {
+                return meta.dacbiet === false;
+            },
+            'noPageOne': true
         }
     },
     'metalsmith-markdown':      {
@@ -72,30 +113,6 @@ site.metalsmith = {
         'smartLists':  true,
         'gfm':         true,
         'tables':      true
-    },
-    'metalsmith-permalinks':    {
-        '_enable':  false,
-        'pattern':  ':collection/:title',
-        'relative': false
-    },
-    'metalsmith-collections':   {
-        '_enable': true,
-        'blog':   {
-            'pattern': 'blog/**/*.md',
-            'sortBy':  'date',
-            'reverse': true
-        }
-    },
-    'metalsmith-pagination':    {
-        '_enable':           true,
-        'collections.items': {
-            'perPage':   6,
-            'layout':    'items.html',
-            'first':     'items/index.html',
-            'filter':    'isMenu === false',
-            'noPageOne': true,
-            'path':      'items/:num/index.html'
-        }
     },
     'metalsmith-layouts':       {
         '_enable':   true,
