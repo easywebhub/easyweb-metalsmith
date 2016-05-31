@@ -1,4 +1,4 @@
-### gulp-metalsmith
+### Hướng dẫn sử dụng source EasyWeb Metalsmith
 #### Cài đặt
 * clone project (mặc định là branch master)
 * npm install
