@@ -13,6 +13,8 @@ const MetalSmithProductionPlugins = [
     'metalsmith-html-minifier'
 ];
 
+
+
 // task build metalsmith
 function metalsmith(done) {
     let ms = new Metalsmith(process.cwd());

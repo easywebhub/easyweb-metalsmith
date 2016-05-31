@@ -79,13 +79,16 @@ site.metalsmith = {
         'relative': false
     },
     'metalsmith-collections':   {
-        '_enable': false,
-        'items':   {
-            'pattern': 'items/**/*.md',
+        '_enable': true,
+        'products':   {
+            'pattern': 'content/products/*.md',
             'sortBy':  'date',
             'reverse': true
         }
+        
     },
+
+
     'metalsmith-pagination':    {
         '_enable':           false,
         'collections.items': {
