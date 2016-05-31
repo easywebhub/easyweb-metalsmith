@@ -42,7 +42,7 @@ site.style = {
     sass:         {
         // đường dẫn tơi các thư viện sass, có thể load bằng @import
         includePaths: [
-			'bower_components'
+            'bower_components'
             // ví dụ
             // 'bower_components/foundation-sites/scss',
             // "bower_components/motion-ui/src",
@@ -79,15 +79,15 @@ site.metalsmith = {
         'relative': false
     },
     'metalsmith-collections':   {
-        '_enable': false,
-        'items':   {
-            'pattern': 'items/**/*.md',
+        '_enable': true,
+        'blog':   {
+            'pattern': 'blog/**/*.md',
             'sortBy':  'date',
             'reverse': true
         }
     },
     'metalsmith-pagination':    {
-        '_enable':           false,
+        '_enable':           true,
         'collections.items': {
             'perPage':   6,
             'layout':    'items.html',
