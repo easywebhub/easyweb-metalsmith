@@ -1,7 +1,10 @@
 ---json
 {
-  "title": "EasyWeb Metalsmith",
-  "layout": "index.html",
+"title": "Index",
+"url": "/",
+"description": "Index Page",
+"layout": "index.html",
+"permalink": false,
+"function": "home",
 }
 ---
-
