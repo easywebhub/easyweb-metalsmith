@@ -1,16 +1,25 @@
 ### gulp-metalsmith
 #### Cài đặt
-* clone project
+* clone project (mặc định là branch master)
 * npm install
 * bower install (nếu project sử dụng bower để quản lý frontend library)
 
-#### Sử dụng
+#### Sử dụng câu lệnh dưới để chạy trên máy cá nhân
 ```js
-npm run build      // build chế độ development
 npm run watch      // watch chế độ development
-npm run build-prod // build chế độ production
+```
+
+#### Sử dụng câu lệnh dưới để build ra code chạy trên server thực
+```js
 npm run watch-prod // watch chế độ production
 ```
+
+#### Sử dụng 1 trong 2 câu lệnh kia để build nhưng không xem trên browser
+```js
+npm run build      // build chế độ development
+npm run build-prod // build chế độ production
+```
+
 
 Đây là base đơn giản metalsmith, mọi cấu hình đều nằm trong file site.js
 #### Cấu hình các đường dẫn
