@@ -6,10 +6,10 @@
 
 #### Sử dụng
 ```js
-npm run build              // build chế độ development
-npm run watch              // watch chế độ development
-npm run build --production // build chế độ production
-npm run watch --production // watch chế độ production
+npm run build      // build chế độ development
+npm run watch      // watch chế độ development
+npm run build-prod // build chế độ production
+npm run watch-prod // watch chế độ production
 ```
 
 Đây là base đơn giản metalsmith, mọi cấu hình đều nằm trong file site.js

@@ -3,8 +3,8 @@
 const PROD = !!(require('yargs').argv.production);
 const site = require('./site');
 const gulp = require('gulp');
-const $ = require('gulp-load-plugins')();
-const browser = require('browser-sync')	;
+const $ = require('gulp-load-plugins')({camelize: true});
+const browser = require('browser-sync');
 const Metalsmith = require('metalsmith');
 const Handlebars = require('handlebars');
 require('./handlebars-helper')(Handlebars);
@@ -116,6 +116,30 @@ function script() {
     return task.pipe(gulp.dest(`${site.buildRoot}/js`));
 }
 
+/**
+ * Inline css, js task
+ */
+function inlineSource(done) {
+    if (!PROD) {
+        console.log('development mode, skipping inlineSource');
+        return done();
+    }
+    return gulp.src(`${site.buildRoot}/**/*.html`)
+        .pipe($.inlineSource({
+            rootpath:        site.buildRoot,
+            ignore:          ['svg', 'png'],
+            compress:        false,
+            applyStyleTags:  true,
+            applyLinkTags:   true,
+            removeStyleTags: true,
+            removeLinkTags:  true,
+            swallowErrors:   false
+        }))
+        .pipe(gulp.dest(file => {
+            return file.base;
+        }));
+}
+
 // copy moi thu trong thu muc ${site.assetRoot} sang ${site.buildRoot}
 function asset() {
     return gulp.src(`${site.assetRoot}/**/*`)
@@ -135,10 +159,9 @@ function server(done) {
 // Xóa ${buildRoot} (metalsmith tự động xóa)
 // build metalsmith, sass, javascript, image
 // copy tất cả qua ${buildRoot}
-gulp.task('build', gulp.series(metalsmith,
-    gulp.parallel(asset, script, sass)));
+gulp.task('build', gulp.series(metalsmith, gulp.parallel(asset, script, sass), inlineSource));
 
-function reload (done) {
+function reload(done) {
     browser.reload();
     done();
 }
