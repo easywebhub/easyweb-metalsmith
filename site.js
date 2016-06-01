@@ -59,11 +59,6 @@ site.metalsmith = {
     'metalsmith-drafts':        {
         '_enable': false
     },
-    'metalsmith-permalinks':    {
-        '_enable':  false,
-        'pattern':  ':collection/:title',
-        'relative': false
-    },
     'metalsmith-matters':       {
         '_enable': true,
         'delims':  ['---json', '---'],
@@ -71,11 +66,20 @@ site.metalsmith = {
             'lang': 'json'
         }
     },
+
+    'metalsmith-markdown':      {
+        '_enable':     true,
+        'smartypants': true,
+        'smartLists':  true,
+        'gfm':         true,
+        'tables':      true
+    },
+
     'metalsmith-collections':   {
         '_enable': true,
         // collection theo file pattern + test limit
         'blog':    {
-            'pattern': 'blog/**/*.md',
+            'pattern': 'blog/**/*.html',
             'sortBy':  'date',
             'reverse': true,
             'limit':   2
@@ -86,9 +90,22 @@ site.metalsmith = {
             'reverse': true
         }
     },
+
+    'metalsmith-permalinks':    {
+        '_enable':  true,
+        // default config
+        'pattern':  ':title',
+        'relative': false,
+        // config rieng cho 1 collection
+        linksets:   [{
+            match:   {collection: 'blog'},
+            pattern: 'aaa-:title'
+        }]
+    },
+
     'metalsmith-pagination':    {
         '_enable': true,
-        'blog':    {
+        'collections.blog':    {
             'perPage':   1,
             'layout':    'blog.html',
             'first':     'blog/index.html',
@@ -96,7 +113,7 @@ site.metalsmith = {
             'noPageOne': true
         },
         // test filter
-        'baiviet': {
+        'collections.baiviet': {
             'perPage':   1,
             'layout':    'blog.html',
             'first':     'baiviet/index.html',
@@ -107,19 +124,14 @@ site.metalsmith = {
             'noPageOne': true
         }
     },
-    'metalsmith-markdown':      {
-        '_enable':     true,
-        'smartypants': true,
-        'smartLists':  true,
-        'gfm':         true,
-        'tables':      true
-    },
+
     'metalsmith-layouts':       {
         '_enable':   true,
         'engine':    'handlebars',
         'directory': `${site.layoutRoot}`,
         'partials':  `${site.layoutRoot}/partial`
     },
+
     'metalsmith-html-minifier': {
         '_enable':               true,
         'removeAttributeQuotes': false,
