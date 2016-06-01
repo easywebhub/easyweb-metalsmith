@@ -167,7 +167,7 @@ function reload(done) {
 }
 
 function watch() {
-    gulp.watch(['gulpfile.js', 'site.js'], gulp.series('build'));
+    gulp.watch(['site.js'], gulp.series('build', reload));
 
     gulp.watch(`${site.assetRoot}/**/*`, gulp.series(asset, reload));      // watch asset
     gulp.watch(`${site.styleRoot}/**/*.{scss,sass}`, sass);                // watch style
