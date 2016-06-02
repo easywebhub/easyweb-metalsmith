@@ -1,7 +1,7 @@
 'use strict';
 
 const PROD = !!(require('yargs').argv.production);
-const site = require('./site');
+let site = require('./site');
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')({camelize: true});
 const browser = require('browser-sync');
@@ -12,6 +12,12 @@ require('./handlebars-helper')(Handlebars);
 const MetalSmithProductionPlugins = [
     'metalsmith-html-minifier'
 ];
+
+function reloadSiteConfig(done) {
+    delete require.cache[require.resolve('./site.js')];
+    site = require('./site');
+    done();
+}
 
 // task build metalsmith
 function metalsmith(done) {
@@ -167,7 +173,7 @@ function reload(done) {
 }
 
 function watch() {
-    gulp.watch(['site.js'], gulp.series('build', reload));
+    gulp.watch(['site.js'], gulp.series(reloadSiteConfig, 'build', reload));
 
     gulp.watch(`${site.assetRoot}/**/*`, gulp.series(asset, reload));      // watch asset
     gulp.watch(`${site.styleRoot}/**/*.{scss,sass}`, sass);                // watch style
