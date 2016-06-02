@@ -17,7 +17,13 @@ const site = {
 
     // global metadata của site
     metadata: {
-        url: 'http://handy.themes.zone'
+        site: {
+            title: 'EasyWeb website',
+            description: 'description of this site',
+            keywords: 'easy web, thiết kế web đơn giản,',
+            author: 'vinaas ltd.,co', 
+            url: 'http://handy.themes.zone'
+        }
     }
 };
 
