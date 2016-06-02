@@ -1,0 +1,52 @@
+/*Navigation CSS*/
+
+.naviTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 25px;
+  background: $color-yellow;
+  a{
+    color: $black;
+  }
+}
+.naviTop__menu{
+  a{
+    padding: 8px 15px 7px 10px;
+    display: block;
+  }
+
+}
+.naviTop__logo{
+  a{
+    max-width: 152px;
+    padding: 5px 0;
+    display: block;
+  }
+}
+.naviTop__search{
+  a{
+    padding: 8px 15px 7px 10px;
+    display: block;
+    color: $black;
+  }
+
+}
+
+/*MENU FEATURE*/
+.menu-feature{
+  li{
+    flex: 1;
+    a{
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      color: $secondary-color;
+    }
+    img{
+      display: block;
+      margin: 0 auto 5px;
+    }
+  }
+}
+/* end MENU FEATURE*/

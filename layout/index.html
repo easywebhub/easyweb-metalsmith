@@ -1,5 +1,133 @@
+{{#extend "default"}}
+{{#content "body"}}
 
-<h2>Website {{title}}</h2>
-<h3>This is standard code referenced from Metalsmith </h3>
+{{> main-slider}}
 
-<p>Click Public_gh-pages.bat to upload /__PUBLIC to production </p>
+{{> menu-feature}}
+
+{{> deal-homepage}}
+
+
+<h2 class="section-title">
+    <a href="">SĂN THƯỞNG</a>
+</h2>
+{{> santhuong-homepage}}
+
+<h2 class="section-title">
+    <a href="">ĐIỆN THOẠI</a>
+</h2>
+
+<div class="scrolls-horizontal section-space">
+    {{#each listItem}}
+    <div class="item-horizontal">
+        <div class="item">
+            <a href="{{ this.link }}" class="item__link"></a>
+
+            <div class="item__image">
+                <img src="{{ this.image }}" alt="">
+            </div>
+
+            <div class="item__name">
+                {{ this.name }}
+            </div>
+
+            <div class="item__price">
+                <span class="item__price--new">{{ this.price.new }}đ   </span>
+                <span class="item__price--old">{{ this.price.old }}đ </span>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+<h2 class="section-title">
+    <a href="">MÁY TÍNH BẢNG</a>
+</h2>
+
+<div class="scrolls-horizontal section-space">
+    {{#each listItem}}
+    <div class="item-horizontal">
+        <div class="item">
+            <a href="{{ this.link }}" class="item__link"></a>
+
+            <div class="item__image">
+                <img src="{{ this.image }}" alt="">
+            </div>
+
+            <div class="item__name">
+                {{ this.name }}
+            </div>
+
+            <div class="item__price">
+                <span class="item__price--new">{{ this.price.new }}đ   </span>
+                <span class="item__price--old">{{ this.price.old }}đ </span>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+
+<h2 class="section-title">
+    <a href="">MÁY TÍNH XÁCH TAY</a>
+</h2>
+
+<div class="scrolls-horizontal section-space">
+    {{#each listItem}}
+    <div class="item-horizontal">
+        <div class="item">
+            <a href="{{ this.link }}" class="item__link"></a>
+
+            <div class="item__image">
+                <img src="{{ this.image }}" alt="">
+            </div>
+
+            <div class="item__name">
+                {{ this.name }}
+            </div>
+
+            <div class="item__price">
+                <span class="item__price--new">{{ this.price.new }}đ   </span>
+                <span class="item__price--old">{{ this.price.old }}đ </span>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+
+<h2 class="section-title">
+    <a href="">LINH PHỤ KIỆN</a>
+</h2>
+
+<div class="scrolls-horizontal section-space">
+    {{#each listItem}}
+    <div class="item-horizontal">
+        <div class="item">
+            <a href="{{ this.link }}" class="item__link"></a>
+
+            <div class="item__image">
+                <img src="{{ this.image }}" alt="">
+            </div>
+
+            <div class="item__name">
+                {{ this.name }}
+            </div>
+
+            <div class="item__price">
+                <span class="item__price--new">{{ this.price.new }}đ   </span>
+                <span class="item__price--old">{{ this.price.old }}đ </span>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+
+{{/content}}
+{{/extend}}

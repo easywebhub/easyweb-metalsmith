@@ -1,0 +1,36 @@
+.item-vertical{
+  background: white;
+  margin-bottom: 10px;
+  .item{
+    border-bottom: 1px solid $color-border1;
+  }
+}
+
+.item-vertical-info{
+  display: flex;
+  align-items: stretch;
+  .item__image{
+    flex: 0 0 120px;
+    margin-bottom: 0;
+  }
+}
+
+.item-vertical-content{
+  width: 100%;
+
+  .item__name{
+    min-height: inherit;
+    margin: 10px 0 5px;
+  }
+  .item__price{
+    margin-bottom: 5px;
+    @include breakpoint(320px down) {
+      font-size: inherit;
+    }
+  }
+  .item__sale{
+      @include breakpoint(320px down) {
+        font-size: 13px;
+      }
+  }
+}

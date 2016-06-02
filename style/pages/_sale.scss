@@ -1,0 +1,54 @@
+.sale-filter{
+  display: flex;
+  align-items: stretch;
+  padding: 10px;
+  background: $color-border1;
+  .choose{
+    flex: 1;
+  }
+  select{
+    margin-bottom: 0;
+  }
+  .new{
+    &:before{
+      content: '|';
+      position: absolute;
+      right: -3px;
+      top: 7px;
+    }
+  }
+  .filter{
+
+    a{
+      white-space: nowrap;
+      display: block;
+      width: 100%;
+      padding: 7px 10px;
+
+    }
+
+    position: relative;
+    text-align: center;
+  }
+}
+
+.sale-item{
+  margin: 0;
+  background: $white;
+  position: relative;
+  figcaption{
+    padding: 5px 10px 15px;
+    .date{
+      color: $color-gray;
+    }
+  }
+}
+
+.sale-detail{
+  background: $white;
+  padding-bottom: 10px;
+  .title{
+    text-align: center;
+    padding: 15px 0 5px;
+  }
+}

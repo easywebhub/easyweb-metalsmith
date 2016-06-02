@@ -1,0 +1,43 @@
+/*COUNTDOWN*/
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  .haicham {
+    padding: 0 5px;
+    position: relative;
+    color: $color-blue-light;
+  }
+
+  .c-element {
+    padding: 4px 4px;
+    background-color: $color-blue-light;
+    color: $white;
+    border-radius: 5px;
+  }
+
+}
+
+/*end COUNTDOWN*/
+
+
+/*DEAL HOMEPAGE*/
+.deal-intro{
+
+}
+
+.deal-intro--title{
+  height: 65px;
+}
+
+/*end DEAL HOMEPAGE*/
+
+/*SANTHUONG HOMPAGE*/
+
+.santhuong-intro{
+  border-top: 1px solid $color-border1;
+}
+
+
+/*end SANTHUONG HOMPAGE*/

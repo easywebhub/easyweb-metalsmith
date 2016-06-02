@@ -1,0 +1,103 @@
+/*Search bar CSS*/
+.searchbar{
+  padding: 10px 0;
+  input{
+    width: 100%;
+    margin-bottom: 0;
+    padding-right: 54px !important;
+  }
+
+
+  .tt-hint{
+    color: $medium-gray;
+  }
+}
+
+.searchbar__field{
+  position: relative;
+}
+
+.searchbar__submit{
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  a{
+    color: $black;
+    background: $color-yellow;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    display: block;
+    height: 33px;
+    width: 42px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 33px;
+    border-left: 1px solid $medium-gray;
+
+    @include breakpoint(321px up){
+      height: 37px;
+      width: 50px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 38px;
+    }
+  }
+}
+
+//SEARCH SUGGEST
+// Styles for the search bar and results list.
+
+.twitter-typeahead {
+  display: block !important;
+  position: relative;
+  width: 100%;
+}
+
+
+.tt-menu {
+  background: white;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.tt-suggestion {
+  @include clearfix;
+  padding: 0.2rem 0.5rem;
+  &:hover,
+  &.tt-cursor {
+    background: $medium-gray;
+    cursor: pointer;
+  }
+
+  .name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: -5px;
+  }
+
+  .price {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+}
+
+.tt-empty {
+  padding: 1rem;
+
+  &:before {
+    content: ':(';
+    font-weight: bold;
+    font-size: 1rem;
+    color: #999;
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+  }
+}
+
+
+
+//end SEARCH SUGGEST

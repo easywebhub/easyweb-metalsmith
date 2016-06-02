@@ -1,0 +1,228 @@
+.scrolls-horizontal{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  background: $white;
+}
+
+.item-horizontal{
+  flex: 0 0 auto;
+  align-items: stretch;
+  border: 1px solid $color-border1;
+  border-right: 0;
+  border-bottom: 0;
+
+  .item{
+    max-width: 180px;
+
+  }
+}
+
+.scrolls-horizontal .item-horizontal:last-child{
+  border-right: 1px solid $color-border1;
+}
+
+.item{
+  position: relative;
+  padding: 15px 10px;
+}
+.item__link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.item__image{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.item__name{
+  min-height: 36px;
+  line-height: 1.1rem;
+  a{
+    color: $secondary-color;
+  }
+}
+
+.item__price{
+  @include breakpoint(320px down) {
+    font-size: 13px;
+  }
+}
+.item__price--new{
+  color: red;
+}
+
+.item__price--old{
+  padding-left: 5px;
+  color: $medium-gray;
+  text-decoration: line-through;
+}
+
+.product__info{
+  background: #fff;
+  margin-bottom: 10px;
+}
+.product__price{
+  margin-bottom: 5px;
+}
+.product__price--new{
+  @include header-size(h3);
+  color: $color-red;
+  padding-right: 15px;
+}
+.product__price--old{
+  @include header-size(h3);
+  color: $color-gray;
+
+  text-decoration: line-through;
+}
+.product__color{
+  display: flex;
+  margin-bottom: 10px;
+  .color{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-clip: content-box;
+    padding:1px;
+    border: 1px solid $light-gray;
+    margin: 0 2px;
+    &.choose{
+      border-color: $dark-gray;
+    }
+  }
+}
+.product__onlyvta{
+  label{
+    font-size: 1rem;
+  }
+}
+.product__title{
+  background: $color-border1;
+  padding: 10px 10px;
+  margin: 10px 0;
+}
+.product__sale{
+  max-height: 150px;
+  overflow: hidden;
+
+  position: relative;
+
+
+  &:after{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    content: "";
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    bottom: 0;
+
+  }
+}
+
+
+/*LOAD MORE only CSS*/
+[for="load_more"]{
+  display: block;
+  text-align: center;
+  span:last-child{
+    display: none;
+  }
+  padding: 5px 0;
+}
+#load_more{ border: 0; clip: rect(0 0 0 0);  height: 1px;    width: 1px;  margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;}
+#load_more:checked ~ .product__sale { max-height: inherit}
+#load_more:checked ~ .product__sale:after { display: none}
+#load_more:checked ~ [for="load_more"] span:first-child {display: none; visibility: hidden;}
+#load_more:checked ~ [for="load_more"] span:last-child {visibility: visible;display:block}
+
+/*end LOAD MORE only CSS*/
+
+
+.product__button{
+  padding: 10px 0;
+  background: #fff;
+  .button{
+    padding: 0.4em 1em;
+    margin-bottom:10px;
+    span{
+      margin-top: 5px;
+      display: block;
+      font-size: 85%;
+    }
+  }
+}
+
+.button-gray{
+    @include button("true", darken($color-border1,10%), darken($color-border1, 20%), $secondary-color, "solid");
+}
+
+.product__button--call{
+  margin-bottom: 10px;
+  @include header-size(h4);
+  .time{
+    color: $primary-color;
+  }
+
+  i{
+    color: $color-red;
+  }
+}
+
+
+
+.des-accordion{
+  .accordion-title{
+    @include header-size(h5);
+    text-transform: uppercase;
+    color: $secondary-color;
+
+    i{
+      min-width: 25px;
+      display: inline-block;
+    }
+  }
+
+  .accordion-title::before{
+    content: "\e649";
+    @extend .themify-font;
+  }
+  .is-active > .accordion-title::before{
+    content: "\e64b";
+  }
+  .is-active{
+    .accordion-title{
+      background: lighten($light-gray,5%);
+    }
+  }
+}
+
+
+
+.product__techSpec{
+  tbody{
+    border:none;
+    border-top: 1px solid $light-gray;
+    border-left: 1px solid $color-border1;
+  }
+  width: 100%;
+  tr{
+    border-bottom: 1px solid $light-gray;
+  }
+  th{
+    width: 26.25%;
+    background: $color-border1;
+    font-weight: normal;
+  }
+  tbody tr:nth-child(even){
+    background: #fff;
+  }
+}

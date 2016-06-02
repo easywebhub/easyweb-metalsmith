@@ -1,0 +1,142 @@
+.popover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2000;
+  transition: opacity 0.2s ease-in ;
+  display: block;
+  opacity: 1;
+}
+
+#panel{
+  transition: opacity 0.2s ease-in ;
+}
+
+.popover-hidden {
+  display: none;
+}
+
+.popover-visuallyhidden {
+  opacity: 0;
+}
+
+
+.popover__title{
+  padding: 15px 10px;
+  margin-bottom: 0;
+  overflow: hidden;
+
+  .feature, .name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+}
+
+
+.popover__content{
+  position: relative;
+
+}
+
+.popover__close{
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  border-bottom: .1rem solid rgba(0,0,0,.2);
+  padding: 11px 10px;
+  z-index: 9999;
+  color: $secondary-color;
+  &:hover, &:active{
+    color: $secondary-color;
+  }
+  .back{
+    font-weight: bold;
+    margin: 0;
+    display: inline-block;
+    padding-left: 5px;
+  }
+}
+.popover__content{
+  padding-top: 45px;
+  height: 100vh;
+}
+
+#popover-hinhanh{
+  .popover__title{
+    color: darken(white,10%);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 10;
+  }
+}
+
+#popover-video{
+  background: #000;
+  color: white;
+  .flex-video{
+    margin-bottom: 0;
+  }
+}
+
+.popover-video-name{
+  padding: 15px 10px;
+}
+
+.popover-video-list{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  background: #000;
+  >div{
+    position: relative;
+    border: none !important;
+
+  }
+
+  .youtube-thumbnail{
+    max-width: 150px;
+    position: relative;
+    display: block;
+    &:before{
+      position: absolute;
+      content: "\e6ad";
+      color: white;
+      top: 50%;
+      right: 50%;
+      font-size: 1.5rem;
+      height: 40px;
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+      margin-right: -20px;
+      margin-top: -20px;
+      @extend .themify-font;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+  }
+}
+
+
+
+
+#popover-video{
+  .popover__title{
+    color: darken(white,10%);
+
+  }
+
+
+
+}
