@@ -141,7 +141,8 @@ site.metalsmith = {
     'metalsmith-html-minifier': {
         '_enable':               true,
         'removeAttributeQuotes': false,
-        'keepClosingSlash':      true
+        'keepClosingSlash':      true,
+        'removeRedundantAttributes': false
     }
 };
 

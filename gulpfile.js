@@ -78,14 +78,14 @@ function sass() {
 
     if (site.style.sass) {
         let sassConfig = Object.assign({}, site.style.sass);
-        sassConfig.outputStyle = PROD ? 'compressed' : 'expanded';
+        sassConfig.outputStyle = 'expanded';
         task = task.pipe($.sass(sassConfig).on('error', $.sass.logError));
     }
 
     if (PROD) {
         if (site.style.autoprefixer)
             task = task.pipe($.autoprefixer(site.style.autoprefixer));
-        task = task.pipe($.cssnano());
+        task = task.pipe($.cssnano({safe: true}));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
@@ -108,8 +108,9 @@ function script() {
         .pipe($.plumber());
     if (!PROD)
         task = task.pipe($.sourcemaps.init());
+
     // babel es6 -> es5
-    task = task.pipe($.babel({ presets: ['es2015'] }));
+    task = task.pipe($.babel({presets: ['es2015'], compact: false}));
 
     if (IS_CONCAT)
         task = task.pipe($.concat(concatName));
@@ -134,14 +135,10 @@ function inlineSource(done) {
     }
     return gulp.src(`${site.buildRoot}/**/*.html`)
         .pipe($.inlineSource({
-            rootpath:        site.buildRoot,
-            ignore:          ['svg', 'png'],
-            compress:        false,
-            applyStyleTags:  true,
-            applyLinkTags:   true,
-            removeStyleTags: true,
-            removeLinkTags:  true,
-            swallowErrors:   false
+            rootpath:      site.buildRoot,
+            ignore:        ['svg', 'png'],
+            compress:      false,
+            swallowErrors: false
         }))
         .pipe(gulp.dest(file => {
             return file.base;
