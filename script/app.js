@@ -194,9 +194,5 @@ if ($('.countdown').length) {
 
 $('.youtube-thumbnail').on('click', function () {
     var url = $(this).attr('data-video-id');
-
     player.cueVideoById(url);
-
-
-
 });

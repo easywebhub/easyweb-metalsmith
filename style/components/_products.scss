@@ -226,3 +226,37 @@
     background: #fff;
   }
 }
+
+
+.productCombo{
+
+}
+.productCombo__title{
+  background: $color-orange;
+  padding: 7px 10px;
+  color: white;
+}
+.productCombo__name{
+  margin-bottom: 0;
+}
+.productCombo__price{
+
+  @include header-size(h3);
+  .tietkiem{
+    font-size: rem-calc(14px);
+  }
+}
+
+.productCombo__type{
+  padding: 10px 10px 0;
+  background: #f9f9f9;
+}
+.productCombo__list{
+  padding: 0 10px 10px;
+  background: #f9f9f9;
+  ul{
+    li{
+      color: $color-gray;
+    }
+  }
+}

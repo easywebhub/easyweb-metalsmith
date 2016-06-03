@@ -108,7 +108,8 @@ function script() {
         .pipe($.plumber());
     if (!PROD)
         task = task.pipe($.sourcemaps.init());
-
+    // babel es6 -> es5
+    task = task.pipe($.babel({ presets: ['es2015'], compact: false}));
     if (IS_CONCAT)
         task = task.pipe($.concat(concatName));
 
