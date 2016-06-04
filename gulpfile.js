@@ -85,7 +85,7 @@ function sass() {
     if (PROD) {
         if (site.style.autoprefixer)
             task = task.pipe($.autoprefixer(site.style.autoprefixer));
-        task = task.pipe($.cssnano());
+        task = task.pipe($.cssnano({safe: true}));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
@@ -133,14 +133,10 @@ function inlineSource(done) {
     }
     return gulp.src(`${site.buildRoot}/**/*.html`)
         .pipe($.inlineSource({
-            rootpath:        site.buildRoot,
-            ignore:          ['svg', 'png'],
-            compress:        false,
-            applyStyleTags:  true,
-            applyLinkTags:   true,
-            removeStyleTags: true,
-            removeLinkTags:  true,
-            swallowErrors:   false
+            rootpath:      site.buildRoot,
+            ignore:        ['svg', 'png'],
+            compress:      false,
+            swallowErrors: false
         }))
         .pipe(gulp.dest(file => {
             return file.base;
