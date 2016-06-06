@@ -23,6 +23,7 @@ function reloadSiteConfig(done) {
 function metalsmith(done) {
     let ms = new Metalsmith(process.cwd());
 
+    ms.clean(false);
     ms.source(site.contentRoot);
     ms.destination(site.buildRoot);
     ms.metadata(site.metadata ? site.metadata : {});
@@ -180,7 +181,7 @@ function watch() {
     gulp.watch([
         `${site.contentRoot}/**/*`,
         `${site.layoutRoot}/**/*`
-    ], gulp.series('build', reload));
+    ], gulp.series(metalsmith, reload));
 }
 
 // Build the site, run the server, and watch for file changes
