@@ -11,6 +11,9 @@ html {
     font-size: 90%;
   }
 }
+.gutter{
+  padding: 0 10px;
+}
 
 
 @mixin header-size($type) {
