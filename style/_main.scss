@@ -66,6 +66,12 @@ html {
 
 /*end TYPOGRAPHY*/
 
+.hideBlock{
+  display: none;
+}
+.showBlock{
+  display: block;
+}
 
 .a-absolute{
   position: absolute;
@@ -106,6 +112,7 @@ html {
 }
 
 
+
 .flex-equal{
   display: flex;
   align-items: stretch;
@@ -114,7 +121,6 @@ html {
     flex: 1;
   }
 }
-
 
 .section-space{
   background: $white;
@@ -133,3 +139,10 @@ html {
     width: 1px;
   }
 }
+
+[type='file'], [type='checkbox'], [type='radio']{
+  margin: 0;
+}
+
+
+

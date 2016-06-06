@@ -66,6 +66,15 @@
   text-decoration: line-through;
 }
 
+.product__image{
+  height: 110px;
+  text-align: center;
+  margin: 1rem 0;
+  img{
+    height: 100%;
+  }
+}
+
 .product__info{
   background: #fff;
   margin-bottom: 10px;
@@ -259,4 +268,117 @@
       color: $color-gray;
     }
   }
+}
+
+.moveStep__title{
+  text-transform: uppercase;
+  background: $primary-color;
+  padding: 7px 10px;
+  color: $white;
+}
+
+
+.moveStep{
+  margin: 0.5rem 0;
+  overflow: hidden;
+  counter-reset: step;
+  display: flex;
+  padding: 0;
+  align-items: stretch;
+  li{
+    flex: 1;
+    line-height: 1.3;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    &:before{
+      content: counter(step);
+      counter-increment: step;
+      width: 30px;
+      line-height: 30px;
+      display: block;
+      font-size: 13px;
+      color: $white;
+      background: $medium-gray;
+      border-radius: 50%;
+      margin: 0 auto 5px auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after{
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: $medium-gray;
+      position: absolute;
+      left: -50%;
+      top: 14px;
+    }
+
+    &:first-child{
+      &:after{
+        background: #f9f9f9 !important;
+      }
+    }
+
+    &.active{
+      &:before{
+        background: $primary-color;
+      }
+      &:after{
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+.gutter{
+  padding: 0 10px;
+}
+
+/*FORM DAT HANG*/
+
+.formDathang{
+  padding: 10px 0;
+  background: $white;
+
+  input[type="text"],input[type="password"],input[type="email"], select{
+    margin-bottom: 0.5rem;
+  }
+}
+.number-list{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background: $color-orange;
+  color: white;
+  margin-right: 5px;
+}
+.formDathang__title{
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: $color-border1;
+  position: relative;
+
+  &:before{
+    content: "\e64b";
+    @extend .themify-font;
+    color: $color-gray;
+    right: 10px;
+    top: 13px;
+    position: absolute;
+  }
+}
+
+.formDathang__content{
+  padding: 15px 10px;
+}
+
+.form-line{
+  margin-bottom: 15px;
 }

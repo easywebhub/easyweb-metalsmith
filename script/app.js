@@ -97,11 +97,14 @@ var slideout = new Slideout({
 
 });
 
+if(document.querySelector('.toggle-button') !== null){
 // Toggle button
-document.querySelector('.toggle-button').addEventListener('click', function(event) {
-    event.preventDefault()
-    slideout.toggle();
-});
+    document.querySelector('.toggle-button').addEventListener('click', function(event) {
+        event.preventDefault()
+        slideout.toggle();
+    });
+}
+
 
 //Close when click outside
 function checkOpen(eve) {
@@ -196,3 +199,13 @@ $('.youtube-thumbnail').on('click', function () {
     var url = $(this).attr('data-video-id');
     player.cueVideoById(url);
 });
+
+
+
+$("input[name='delivery']" ).on( "change", function() {
+    if (!this.checked) return;
+    var name = $(this).data("chosen");
+    $("#"+name).fadeIn().siblings().hide();
+
+});
+

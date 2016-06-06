@@ -23,6 +23,7 @@ function reloadSiteConfig(done) {
 function metalsmith(done) {
     let ms = new Metalsmith(process.cwd());
 
+    ms.clean(false);
     ms.source(site.contentRoot);
     ms.destination(site.buildRoot);
     ms.metadata(site.metadata ? site.metadata : {});
@@ -31,30 +32,30 @@ function metalsmith(done) {
     Object.keys(site.metalsmith).forEach(pluginName => {
         // load plugin đúng theo dev hoặc prod mode
         if (MetalSmithProductionPlugins.indexOf(pluginName) == 0 && !PROD)
+    return;
+
+    let options = site.metalsmith[pluginName];
+    if (options._enable !== undefined) {
+        if (options._enable == false)
             return;
+        delete options._enable;
+    }
+    let plugin = require(pluginName);
 
-        let options = site.metalsmith[pluginName];
-        if (options._enable !== undefined) {
-            if (options._enable == false)
-                return;
-            delete options._enable;
-        }
-        let plugin = require(pluginName);
-
-        // một số config thêm cho base metalsmith tùy theo plugin
-        switch (pluginName) {
-            case 'metalsmith-matters':
-                // disable front matter nếu sữ dụng metalsmith-matters
-                ms.frontmatter(false);
-                ms.use(plugin(options));
-                break;
-            case 'metalsmith-html-minifier':
-                ms.use(plugin('*.html', options));
-                break;
-            default:
-                ms.use(plugin(options));
-        }
-    });
+    // một số config thêm cho base metalsmith tùy theo plugin
+    switch (pluginName) {
+        case 'metalsmith-matters':
+            // disable front matter nếu sữ dụng metalsmith-matters
+            ms.frontmatter(false);
+            ms.use(plugin(options));
+            break;
+        case 'metalsmith-html-minifier':
+            ms.use(plugin('*.html', options));
+            break;
+        default:
+            ms.use(plugin(options));
+    }
+});
 
     ms.build(function (err) {
         if (err) {
@@ -78,7 +79,7 @@ function sass() {
 
     if (site.style.sass) {
         let sassConfig = Object.assign({}, site.style.sass);
-        sassConfig.outputStyle = PROD ? 'compressed' : 'expanded';
+        sassConfig.outputStyle = 'expanded';
         task = task.pipe($.sass(sassConfig).on('error', $.sass.logError));
     }
 
@@ -108,15 +109,17 @@ function script() {
         .pipe($.plumber());
     if (!PROD)
         task = task.pipe($.sourcemaps.init());
+
     // babel es6 -> es5
-    task = task.pipe($.babel({ presets: ['es2015'], compact: false}));
+    task = task.pipe($.babel({presets: ['es2015'], compact: false}));
+
     if (IS_CONCAT)
         task = task.pipe($.concat(concatName));
 
     if (PROD) {
         task = task.pipe($.uglify().on('error', e => {
-            console.log(e);
-        }));
+                console.log(e);
+    }));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
@@ -139,8 +142,8 @@ function inlineSource(done) {
             swallowErrors: false
         }))
         .pipe(gulp.dest(file => {
-            return file.base;
-        }));
+                return file.base;
+}));
 }
 
 // copy moi thu trong thu muc ${site.assetRoot} sang ${site.buildRoot}
@@ -178,7 +181,7 @@ function watch() {
     gulp.watch([
         `${site.contentRoot}/**/*`,
         `${site.layoutRoot}/**/*`
-    ], gulp.series('build', reload));
+    ], gulp.series(metalsmith, reload));
 }
 
 // Build the site, run the server, and watch for file changes

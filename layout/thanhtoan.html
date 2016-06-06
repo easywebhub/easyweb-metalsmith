@@ -1,0 +1,119 @@
+{{#extend "default"}}
+
+{{#content "header" mode="replace"}}
+
+{{/content}}
+
+{{#content "body"}}
+
+<h3 class="moveStep__title">
+    1. Thông tin đặt mua
+</h3>
+
+
+<ul class="moveStep">
+    <li class="active">Đặt mua</li>
+    <li class="">Thanh toán</li>
+    <li class="">Done</li>
+</ul>
+
+
+<div class="product__info">
+    <div class="row align-middle">
+        <div class="small-4 columns">
+            <div class="product__image">
+                <img src="assets/img/product/product1.jpg">
+            </div>
+        </div>
+        <div class="small-8 columns">
+            <h1 class="product__name">Iphone 6s 16Gb (IP-J710F)</h1>
+            <div class="product__price">
+                <span class="product__price--new">13,890,000đ</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="formDathang">
+    <div class="product__color align-middle gutter">
+        <span class="number-list">1</span> Chọn màu  &nbsp;
+        <input type="radio" name="chooseColor" value="" id="color1"><label for="color1"><span class="color choose" style="background-color: #4a4a4a;"></span></label>
+        <input type="radio" name="chooseColor" value="" id="color2"><label for="color2"><span class="color" style="background-color: #d9d689;"></span></label>
+        <input type="radio" name="chooseColor" value="" id="color3"><label for="color3"><span class="color" style="background-color: #df907f;"></span></label>
+    </div>
+
+    <div class="formDathang__title">
+        <span class="number-list">2</span> Thông tin người mua  &nbsp;
+        <input type="radio" name="sex" value="" id="male"><label for="male">Anh</label>
+        <input type="radio" name="sex" value="" id="female"><label for="female">Chị</label>
+    </div>
+
+    <div class="formDathang__content">
+        <input type="text" placeholder="Họ và tên bạn ( bắt buộc )">
+        <input type="text" placeholder="Số di động ( bắt buộc )">
+        <input type="email" placeholder="Email">
+    </div>
+
+
+    <div class="formDathang__title">
+        <span class="number-list">3</span> Chọn hình thức nhận hàng  &nbsp;
+
+    </div>
+
+    <div class="formDathang__content">
+
+        <div class="form-line">
+            <input type="radio" name="delivery" value="" data-chosen="giaohangtannoi" id="ghtn"><label for="ghtn">Giao hàng tận nơi</label>
+            <input type="radio" name="delivery" value="" data-chosen="nhanhangsieuthi" id="nhtst"><label for="nhtst">Nhận hàng tại siêu thị</label>
+        </div>
+
+
+        <div class="giaohangtannoi hideBlock">
+            <select class="">
+                <option value="">Chọn thành phố</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+
+            <select class="">
+                <option value="">Chọn quận huyện</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+
+            <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
+        </div>
+
+        <div class="nhanhangsieuthi hideBlock">
+            <select class="">
+                <option value="">Chọn quận huyện</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+
+            <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="" class="button alert large">ĐẶT HÀNG</a>
+    </div>
+</div>
+
+
+{{/content}}
+
+
+{{#content "footer" mode="replace"}}
+{{/content}}
+
+{{/extend}}
