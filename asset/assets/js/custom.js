@@ -199,7 +199,6 @@ if ($('.countdown').length) {
 
 })();
 
-
 // Load video
 
 $('.youtube-thumbnail').on('click', function () {
@@ -207,17 +206,27 @@ $('.youtube-thumbnail').on('click', function () {
     player.cueVideoById(url);
 });
 
+function showContentCheckbox(nameCheckbox){
+     var allCheckbox = [];
+    var selection = $("input[name='" + nameCheckbox +"']" );
+    selection.each(function(){
+        allCheckbox.push($(this).data("chosen"));
+    });
 
-function showHideRadio(nameChosen){
-    $("input[name='" + nameChosen +"']" ).on( "change", function() {
+    selection.on( "change", function() {
         if (!this.checked) return;
         var name = $(this).data("chosen");
-        $("#"+name).fadeIn().siblings().hide();
+
+        for (var i = 0; i < allCheckbox.length; i++) {
+            $("#"+allCheckbox[i]).hide();
+        }
+
+        $("#"+name).fadeIn();
     });
 }
-showHideRadio("delivery");
-showHideRadio("paymentType");
-showHideRadio("masterCard");
+showContentCheckbox("delivery");
+showContentCheckbox("paymentType");
+showContentCheckbox("masterCard");
 
 
 
@@ -246,6 +255,7 @@ $(function() {
         ev.preventDefault();
     });
 });
+
 
 /*end CHECK FORM DAT HANG STEP BY STEP, ap dung sau*/
 
