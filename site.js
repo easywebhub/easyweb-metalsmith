@@ -17,7 +17,13 @@ const site = {
 
     // global metadata của site
     metadata: {
-        url: 'http://handy.themes.zone'
+        site: {
+            title: 'EasyWeb website',
+            description: 'description of this site',
+            keywords: 'easy web, thiết kế web đơn giản,',
+            author: 'vinaas ltd.,co', 
+            url: 'http://handy.themes.zone'
+        }
     }
 };
 
@@ -42,7 +48,7 @@ site.style = {
     sass:         {
         // đường dẫn tơi các thư viện sass, có thể load bằng @import
         includePaths: [
-			'bower_components'
+            'bower_components'
             // ví dụ
             // 'bower_components/foundation-sites/scss',
             // "bower_components/motion-ui/src",
@@ -66,6 +72,7 @@ site.metalsmith = {
             'lang': 'json'
         }
     },
+
     'metalsmith-markdown':      {
         '_enable':     true,
         'smartypants': true,
@@ -73,39 +80,70 @@ site.metalsmith = {
         'gfm':         true,
         'tables':      true
     },
-    'metalsmith-permalinks':    {
-        '_enable':  false,
-        'pattern':  ':collection/:title',
-        'relative': false
-    },
+
     'metalsmith-collections':   {
         '_enable': true,
-        'products':   {
-            'pattern': 'content/products/*.md',
+        // collection theo file pattern + test limit
+        'blog':    {
+            'pattern': 'blog/**/*.html',
+            'sortBy':  'date',
+            'reverse': true,
+            'limit':   2
+        },
+        // collection theo key trong metadata `"collection": "baiviet"`
+        'baiviet': {
             'sortBy':  'date',
             'reverse': true
+        },
+        'chauthuytinh':{
+             'pattern': 'chauthuytinh/**/*.html',
+            'sortBy':  'date',
+            'reverse': true,
+           
         }
-        
     },
 
+    'metalsmith-permalinks':    {
+        '_enable':  true,
+        // default config
+        'pattern':  ':title',
+        'relative': false,
+        // config rieng cho 1 collection
+        linksets:   [{
+            match:   {collection: 'blog'},
+            pattern: 'aaa-:title'
+        }]
+    },
 
     'metalsmith-pagination':    {
-        '_enable':           false,
-        'collections.items': {
-            'perPage':   6,
-            'layout':    'items.html',
-            'first':     'items/index.html',
-            'filter':    'isMenu === false',
-            'noPageOne': true,
-            'path':      'items/:num/index.html'
+        '_enable': true,
+        'collections.blog':    {
+            'perPage':   1,
+            'layout':    'blog.html',
+            'first':     'blog/index.html',
+            'path':      'blog/:num/index.html',
+            'noPageOne': true
+        },
+        // test filter
+        'collections.baiviet': {
+            'perPage':   1,
+            'layout':    'blog.html',
+            'first':     'baiviet/index.html',
+            'path':      'baiviet/:num/index.html',
+            'filter':    meta => {
+                return meta.dacbiet === false;
+            },
+            'noPageOne': true
         }
     },
+
     'metalsmith-layouts':       {
         '_enable':   true,
         'engine':    'handlebars',
         'directory': `${site.layoutRoot}`,
         'partials':  `${site.layoutRoot}/partial`
     },
+
     'metalsmith-html-minifier': {
         '_enable':               true,
         'removeAttributeQuotes': false,

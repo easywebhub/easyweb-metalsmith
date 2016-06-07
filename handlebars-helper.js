@@ -33,5 +33,5 @@ module.exports = function (Handlebars) {
 
         return moment(context).format(format);
     });
-
 };
+

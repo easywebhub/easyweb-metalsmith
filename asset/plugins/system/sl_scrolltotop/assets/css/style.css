@@ -1,0 +1,44 @@
+/**
+ * @version		$Id$
+ * @author		Pham Minh Tuan (admin@vnskyline.com)
+ * @package		Joomla.Site
+ * @subpakage	Skyline.ScrollToTop
+ * @copyright	Copyright (c) 2012 Skyline Software (http://www.vnskyline.com). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+.scrollToTop {
+	background: none repeat scroll 0 0 #121212;
+	border: 1px solid #333333;
+	bottom: 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	visibility: hidden;
+	font-size: 0.9em;
+	padding: 5px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	text-transform: lowercase;
+	width: 100px;
+	z-index: 10;
+	opacity: 0;
+}
+
+.scrollToTop-icon {
+	background: url(../images/top-metro.png) no-repeat scroll center center #121212 !important;
+	border: 1px solid #333333;
+	bottom: 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	visibility: hidden;
+	padding: 2px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	width: 60px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	text-indent: -999em;
+}

@@ -1,0 +1,8 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* Background: Plain */
+
+body#page {
+// background: #DCE6E2 url(../../images/background/plain/page.jpg) no-repeat fixed top center; 
+background-color: #FAFAFA;
+}
