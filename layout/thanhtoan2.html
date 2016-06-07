@@ -1,23 +1,15 @@
 {{#extend "default"}}
 
-{{#content "header" mode="replace"}}
 
-{{/content}}
 
 {{#content "body"}}
 
 <h3 class="moveStep__title">
-  <span>1. Thông tin đặt mua</span>
-  <span class="hideBlock">2. Hình thức nhận hàng</span>
-  <span class="hideBlock">3. Thanh toán</span>
+  <span>Thanh toán hóa đơn</span>
+
 </h3>
 
 
-<ul class="moveStep">
-  <li class="active">Thông tin <br> đặt mua</li>
-  <li class="">Hình thức nhận hàng</li>
-  <li class="">Thanh toán</li>
-</ul>
 
 
 <div class="product__info">
@@ -53,9 +45,6 @@
   </div>
 
 </div>
-
-
-
 
 
 <div class="formDathang">
@@ -107,19 +96,10 @@
     </div>
 
 
-    <div class="gutter">
-      <button class="button warning large expanded" type="submit" value="Submit">ĐẶT HÀNG <i class="ti-angle-right"></i>
-      </button>
-    </div>
 
-  </form>
-
-
-  <form data-abide novalidate id="formDathang2" class="hideBlock">
 
     <div class="formDathang__title">
       <span class="number-list">3</span> Chọn hình thức nhận hàng &nbsp;
-
     </div>
 
     <div class="formDathang__content">
@@ -162,27 +142,103 @@
           <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
         </div>
       </div>
+    </div>
+
+    <div class="formDathang__title">
+      <span class="number-list">4</span> Nhập Vcoupon hay mã khuyến mãi
+    </div>
+
+    <div class="formDathang__content">
+
+        <div class="form-inline-button flex-equal">
+          <input type="text" placeholder="Nhập Vcoupon hay mã khuyến mãi để được giảm giá">
+
+          <a href="#features" class="button alert">Sử dụng</a>
+        </div>
+
+    </div>
+
+    <div class="formDathang__title">
+      <span class="number-list">5</span> Hình thức thanh toán
+    </div>
+
+    <div class="formDathang__content">
+      <div class="form-line">
+        <input type="radio" name="paymentType" value="" data-chosen="masterCard-none" id="paymentType1"><label for="paymentType1">Thanh toán khi nhận hàng</label>
+        <input type="radio" name="paymentType" value="" data-chosen="masterCard-none" id="paymentType2"><label for="paymentType2">Chuyển khoản</label>
+      </div>
+
+      <div class="form-line">
+        <input type="radio" name="paymentType" value="" data-chosen="masterCard" id="paymentType3"><label for="paymentType3">Thanh toán trực tuyến</label>
+
+        <div>
+          <div id="masterCard">
+
+            <input type="radio" name="masterCard" value="" data-chosen="masterCard-uudai" id="masterCard1"><label for="masterCard1"><img
+                  src="https://vienthonga.vn/Content/images/popup/visa.png" alt=""></label>
+
+            <input type="radio" name="masterCard" value="" data-chosen="masterCard-no-uudai" id="masterCard2"><label for="masterCard2"><img
+                  src="https://vienthonga.vn/Content/images/popup/mastercard.png" alt=""></label>
+
+            <input type="radio" name="masterCard" value="" data-chosen="masterCard-no-uudai" id="masterCard3"><label for="masterCard3"><img
+                  src="https://vienthonga.vn/Content/images/popup/atm.png" alt=""></label>
+
+            <div>
+
+              <div id="masterCard-uudai" class="hideBlock">
+                  <div class="border">
+                    <h4><i class="vta-check"></i> Ưu đãi khi thanh toán bằng VISA</h4>
+                    <div><span>. Giảm ngay 5%</span> trên giá trị đơn hàng.</div>
+                    <div><span>. Đặc biệt giảm đến 10%</span> vào ngày thứ 6 hàng tuần.</div>
+                    <div>(Mức giảm tối đa 1,000,000đ)</div>
+                  </div>
+              </div>
+
+              <div id="masterCard-no-uudai">
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div id="masterCard-none"></div>
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="form-line">
+        <input type="checkbox" value="" data-chosen="" id="xuathoadon"><label for="xuathoadon">Xuất hóa đơn công ty</label>
+
+        <div>
+          
+        </div>
+
+
+
+      </div>
+
 
 
 
     </div>
+
 
     <div class="gutter">
       <button class="button warning large expanded" type="submit" value="Submit">ĐẶT HÀNG <i class="ti-angle-right"></i>
       </button>
     </div>
 
-  </form>
 
-  <form data-abide novalidate id="formDathang3" class="hideBlock">
-
-    <div class="formDathang__title">
-      <span class="number-list">3</span> Chọn hình thức nhận hàng &nbsp;
-
-    </div>
 
 
   </form>
+
 
 </div>
 

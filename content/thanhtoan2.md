@@ -1,8 +1,7 @@
 ---json
 {
   "title": "Vien thong A",
-  "layout": "product.html",
-  "product": "true",
+  "layout": "thanhtoan2.html",
   "listItem": [
     {
       "name": "iPhone 5S 16GB Gold",

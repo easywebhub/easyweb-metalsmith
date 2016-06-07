@@ -63,6 +63,53 @@
 }
 
 
+.formDathang-step2{
+  .moveStep{
+    li:nth-child(2),li:nth-child(1){
+      &:before{
+        background: $primary-color;
+      }
+      &:after{
+        background: $primary-color;
+      }
+    }
+  }
+
+  .moveStep__title{
+    span:nth-child(1){
+      display: none;
+    }
+    span:nth-child(2){
+      display: block;
+    }
+  }
+}
+.formDathang-step3{
+  .moveStep{
+    li:nth-child(2),li:nth-child(1),li:nth-child(3){
+      &:before{
+        background: $primary-color;
+      }
+      &:after{
+        background: $primary-color;
+      }
+    }
+  }
+
+  .moveStep__title{
+    span:nth-child(1){
+      display: none;
+    }
+    span:nth-child(2){
+      display: none;
+    }
+    span:nth-child(3){
+      display: block;
+    }
+  }
+}
+
+
 
 /*FORM DAT HANG*/
 
@@ -114,5 +161,58 @@
   }
   label{
     text-align: left;
+  }
+}
+
+.form-inline-button{
+  padding: 0 0 10px;
+  input{
+    margin-bottom: 0 !important;
+    flex: 1;
+  }
+  a{
+    font-size: rem-calc(18px);
+    padding: 0.51em 1em;
+    margin-left: 7px;
+    margin-bottom: 0;
+    white-space: nowrap;
+
+    &:hover, &:active, &:focus{
+
+    }
+  }
+}
+
+#masterCard{
+  padding: 5px 5px 5px 15px;
+  background: $color-border1;
+  margin: 5px 0;
+  display: none;
+}
+
+#masterCard-uudai{
+  padding: 3px;
+  background: #f9ead4;
+  margin-top: 15px;
+  border-radius: 4px;
+  position: relative;
+  h4{
+    color: $color-orange;
+  }
+  .border{
+    padding: 8px 11px;
+    border: 1px dashed #603913;
+    border-radius: 4px;
+  }
+  &:after{
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid #f9ead4;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: 35px;
   }
 }

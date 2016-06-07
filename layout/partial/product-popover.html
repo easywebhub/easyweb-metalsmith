@@ -1,0 +1,234 @@
+
+<div class="popover popover-hidden popover-visuallyhidden" id="popover-hinhanh">
+
+    <a href="" class="popover__close"><i class="ti-angle-left"></i> <h4 class="back"> Quay lại</h4> </a>
+
+    <div class="popover__content">
+
+        <div class="popover__title">
+            <h5 class="feature">Hình ảnh : <span class="start_index">1</span> / <span class="end_index"></span></h5>
+            <h2 class="name"><b>Iphone 6s Gold 16GB</b></h2>
+        </div>
+
+
+        <div class="swiper-popover">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img data-src="assets/img/slider/slider0.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="assets/img/slider/slider1.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="assets/img/slider/slider2.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="assets/img/slider/slider3.jpg" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="popover popover-hidden popover-visuallyhidden" id="popover-video">
+
+    <a href="" class="popover__close"><i class="ti-angle-left"></i> <h4 class="back"> Quay lại</h4> </a>
+
+    <div class="popover__content">
+
+        <div class="popover__title">
+            <h5 class="feature">Video cho sản phẩm : </h5>
+            <h2 class="name"><b>Iphone 6s Gold 16GB</b></h2>
+        </div>
+
+
+        <div class="flex-video widescreen">
+            <iframe id="player" type="text/html" width="640" height="390"
+                    src="http://www.youtube.com/embed/cGpQzHmNjHc?enablejsapi=1"
+                    frameborder="0"></iframe>
+        </div>
+
+        <div class="scrolls-horizontal section-space popover-video-list">
+
+            <div class="item-horizontal">
+                <div class="youtube-thumbnail" data-video-id="cGpQzHmNjHc">
+                    <img class="" src="http://img.youtube.com/vi/cGpQzHmNjHc/0.jpg" >
+                </div>
+
+            </div>
+            <div class="item-horizontal">
+                <div class="youtube-thumbnail" data-video-id="0LKHHJ43iAE">
+                    <img class="" src="http://img.youtube.com/vi/0LKHHJ43iAE/0.jpg" >
+                </div>
+            </div>
+            <div class="item-horizontal">
+                <div class="youtube-thumbnail" data-video-id="AdTaVMbNAiU">
+                    <img class="" src="http://img.youtube.com/vi/AdTaVMbNAiU/0.jpg" >
+                </div>
+            </div>
+
+            <div class="item-horizontal">
+                <div class="youtube-thumbnail" data-video-id="SRiFCFbyCt8">
+                    <img class="" src="http://img.youtube.com/vi/SRiFCFbyCt8/0.jpg" >
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+
+            function onPlayerReady(event) {
+                event.target.stopVideo();
+            }
+
+            var done = false;
+            function onPlayerStateChange(event) {
+                if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                }
+            }
+            function stopVideo() {
+                player.stopVideo();
+            }
+
+        </script>
+
+    </div>
+</div>
+
+
+
+<div class="popover popover-hidden popover-visuallyhidden" id="popover-thongso">
+
+    <a href="" class="popover__close"><i class="ti-angle-left"></i> <h4 class="back"> Quay lại</h4> </a>
+
+    <div class="popover__content">
+
+        <div class="popover__title">
+            <h5 class="feature">Thông số kỹ thuật :</h5>
+            <h2 class="name"><b>Iphone 6s Gold 16GB</b></h2>
+        </div>
+
+        <table class="product__techSpec">
+            <tbody>
+            <tr>
+                <th>OS</th>
+                <td>iOS</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>64 GB</td>
+            </tr>
+            <tr>
+                <th>Item Weight</th>
+                <td>8 ounces</td>
+            </tr>
+            <tr>
+                <th>Product Dimensions</th>
+                <td>6.7 x 4.7 x 0.2 inches</td>
+            </tr>
+            <tr>
+                <th>Item model number</th>
+                <td>iPhone6s-10</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>8 Ounces</td>
+            </tr>
+            <tr>
+                <th>Colour</th>
+                <td>Gold</td>
+            </tr>
+
+            <tr>
+                <th>OS</th>
+                <td>iOS</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>64 GB</td>
+            </tr>
+            <tr>
+                <th>Item Weight</th>
+                <td>8 ounces</td>
+            </tr>
+            <tr>
+                <th>Product Dimensions</th>
+                <td>6.7 x 4.7 x 0.2 inches</td>
+            </tr>
+            <tr>
+                <th>Item model number</th>
+                <td>iPhone6s-10</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>8 Ounces</td>
+            </tr>
+            <tr>
+                <th>Colour</th>
+                <td>Gold</td>
+            </tr>
+
+            <tr>
+                <th>OS</th>
+                <td>iOS</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>64 GB</td>
+            </tr>
+            <tr>
+                <th>Item Weight</th>
+                <td>8 ounces</td>
+            </tr>
+            <tr>
+                <th>Product Dimensions</th>
+                <td>6.7 x 4.7 x 0.2 inches</td>
+            </tr>
+            <tr>
+                <th>Item model number</th>
+                <td>iPhone6s-10</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>8 Ounces</td>
+            </tr>
+            <tr>
+                <th>Colour</th>
+                <td>Gold</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
