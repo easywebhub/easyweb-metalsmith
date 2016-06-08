@@ -216,3 +216,18 @@
     left: 35px;
   }
 }
+
+.formDathang__result{
+  background: $color-border1;
+
+  ul{
+    margin: 0;
+    padding: 10px 10px;
+    line-height: 2;
+  }
+
+  .total{
+    font-weight: bold;
+    @include header-size(h4);
+  }
+}

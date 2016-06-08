@@ -199,22 +199,44 @@
 
 
       <div class="form-line">
-        <input type="checkbox" value="" data-chosen="" id="xuathoadon"><label for="xuathoadon">Xuất hóa đơn công
+        <input type="checkbox" value="" data-chosen="f-xuathoadon" name="xuathoadon" id="xhd"><label for="xhd">Xuất hóa đơn công
         ty</label>
+      </div>
+        <div id="f-xuathoadon" class="hideBlock">
+          <label>
+            <input type="text" placeholder="Tên công ty">
+          </label>
 
-        <div>
+          <label>
+            <input type="text" placeholder="Địa chỉ">
+          </label>
+
+          <label>
+            <input type="text" placeholder="Mã số thuế">
+          </label>
 
         </div>
 
+    </div>
 
-      </div>
+    <div class="formDathang__result">
+      <ul class="">
+        <li>Đơn giá:                                                    <span class="float-right">12,500,000đ</span> </li>
+        <li>Giá trừ PMH:                                             <span class="float-right">12,500,000đ</span></li>
+        <li>Giá trừ Vcoupon:                                      <span class="float-right">12,500,000đ</span></li>
+        <li>Phí vận chuyển:                                               <span class="float-right">30,000đ</span></li>
+        <li><i>( Áp dụng cho đơn hàng dưới 400,000đ )</i></li>
+
+        <li class="total">Tổng số tiền thanh toán:                                                <span class="float-right">13,000,000đ</span></li>
+      </ul>
+
 
 
     </div>
 
 
     <div class="gutter">
-      <button class="button warning large expanded" type="submit" value="Submit">ĐẶT HÀNG <i class="ti-angle-right"></i>
+      <button class="button warning large expanded" type="submit" value="Submit">ĐẶT MUA</i>
       </button>
     </div>
 

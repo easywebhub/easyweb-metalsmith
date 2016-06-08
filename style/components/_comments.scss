@@ -79,8 +79,11 @@
 .comment-meta{
   margin-bottom: 10px;
   font-size: 13px;
+  input,textarea{
+    margin: 0 0 0.5rem;
+  }
 
-  a{
+  a:not(.button){
     display: inline-block;
     padding: 5px 10px 5px 0;
   }
@@ -105,4 +108,19 @@
 .comment-loadmore{
   padding: 5px 10px;
   background: $light-gray;
+}
+
+
+.comment-replay{
+  display: none;
+  padding: 5px 10px;
+  background: $color-border1;
+}
+
+.comment{
+  .comment{
+    .comment-replay{
+      padding: 0;
+    }
+  }
 }

@@ -214,8 +214,14 @@ function showContentCheckbox(nameCheckbox){
     });
 
     selection.on( "change", function() {
-        if (!this.checked) return;
+
         var name = $(this).data("chosen");
+
+        if (!this.checked) {
+            $("#"+name).hide();
+            return
+        };
+
 
         for (var i = 0; i < allCheckbox.length; i++) {
             $("#"+allCheckbox[i]).hide();
@@ -227,8 +233,21 @@ function showContentCheckbox(nameCheckbox){
 showContentCheckbox("delivery");
 showContentCheckbox("paymentType");
 showContentCheckbox("masterCard");
+showContentCheckbox("xuathoadon");
 
 
+
+/*Reply comments*/
+$(function() {
+    $(".reply-comment-btn").click(function(e){
+        e.preventDefault();
+        $(this).parent().children(".comment-replay").slideToggle("fast");
+    });
+});
+
+
+
+/*End reply comments*/
 
 
 /*CHECK FORM DAT HANG STEP BY STEP, ap dung sau*/
