@@ -401,7 +401,7 @@
 }
 
 .itemFilter__form{
-  background:  $color-border1;
+  background:  $color-border2;
   position: absolute;
   width: 100%;
   left: 0;
@@ -427,6 +427,24 @@
       a{
         color: $primary-color;
       }
+    }
+  }
+}
+.itemFilter__checkbox{
+  display: flex;
+  padding: 10px;
+  .title{
+    color: $primary-color;
+    font-weight: bold;
+    @include header-size(h4);
+  }
+}
+.itemFilter__checkbox--col{
+
+  flex: 0 0 50%;
+  ul{
+    li{
+      padding: 3px 0;
     }
   }
 }

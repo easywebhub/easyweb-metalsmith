@@ -215,19 +215,17 @@ function showContentCheckbox(nameCheckbox){
 
     selection.on( "change", function() {
 
-        var name = $(this).data("chosen");
+        var name =$("#"+$(this).data("chosen")) ;
 
         if (!this.checked) {
-            $("#"+name).hide();
+            name.hide();
             return
         };
-
 
         for (var i = 0; i < allCheckbox.length; i++) {
             $("#"+allCheckbox[i]).hide();
         }
-
-        $("#"+name).fadeIn();
+        name.fadeIn();
     });
 }
 showContentCheckbox("delivery");
@@ -245,10 +243,10 @@ function showContentFilter(nameFilter){
 
     selection.on( "click", function(e) {
         $this = $(this);
-        var name = $this.data("filter");
+        var name = $("#"+$this.data("filter"));
 
         if($this.hasClass("active")){
-            $("#"+name).fadeOut("fast");
+            name.fadeOut("fast");
             $this.removeClass("active");
             return;
         } else{
@@ -260,8 +258,7 @@ function showContentFilter(nameFilter){
         for (var i = 0; i < allFilter.length; i++) {
             $("#"+allFilter[i]).hide();
         }
-
-        $("#"+name).fadeIn("fast");
+        name.fadeIn("fast");
     });
 }
 
