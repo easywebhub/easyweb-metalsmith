@@ -45,18 +45,20 @@
 }
 .item__name{
   min-height: 36px;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
   a{
     color: $secondary-color;
   }
 }
 
 .item__price{
-  @include breakpoint(320px down) {
-    font-size: 13px;
-  }
+
   @include breakpoint(500px down){
     font-size: 14px;
+  }
+
+  @include breakpoint(320px down) {
+    font-size: 13px;
   }
 }
 .item__price--new{
@@ -76,12 +78,13 @@
   span{
     color: $color-orange;
   }
-  @include breakpoint(320px down) {
-    font-size: 12px;
 
-  }
   @include breakpoint(500px down){
     font-size: 13px;
+  }
+
+  @include breakpoint(320px down) {
+    font-size: 12px;
   }
 }
 
@@ -326,8 +329,12 @@
 /*Feature item*/
 .item__feature{
   display: flex;
+  align-items: center;
   .item__image{
     flex: 0 0 120px;
+  }
+  .item__name{
+    min-height: inherit;
   }
 }
 .item__feature-info{
@@ -358,9 +365,70 @@
 
 
 /*FILTER*/
+
 .itemFilter{
+  position: relative;
+  z-index: 5;
+}
+
+
+.itemFilter__menu{
+  margin: 0;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  background: $white;
+  >li{
+    cursor: pointer;
+    flex: 1;
+    border-right: 1px solid $light-gray;
+    &:last-child{
+      border-right: none;
+    }
+
+    display: block;
+    padding: 10px 10px;
+    width: 100%;
+    color: $secondary-color;
+    &.active{
+      background: $color-border1;
+    }
+  }
+
 
 }
 
+.itemFilter__form{
+  background:  $color-border1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  border-bottom: 1px solid $light-gray;
+
+}
+
+.itemFilter__list{
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  >li{
+      flex: 0 0 50%;
+    a{
+      color: $secondary-color;
+      display: block;
+      padding: 3px 0;
+    }
+    &.active{
+      a{
+        color: $primary-color;
+      }
+    }
+  }
+}
 
 /*end FILTER*/

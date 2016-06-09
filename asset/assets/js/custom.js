@@ -236,6 +236,37 @@ showContentCheckbox("masterCard");
 showContentCheckbox("xuathoadon");
 
 
+function showContentFilter(nameFilter){
+    var allFilter = [];
+    var selection = $("[name='" + nameFilter +"']" );
+    selection.each(function(){
+        allFilter.push($(this).data("filter"));
+    });
+
+    selection.on( "click", function(e) {
+        $this = $(this);
+        var name = $this.data("filter");
+
+        if($this.hasClass("active")){
+            $("#"+name).fadeOut("fast");
+            $this.removeClass("active");
+            return;
+        } else{
+            $this.siblings().removeClass("active");
+        }
+
+        $this.addClass("active");
+
+        for (var i = 0; i < allFilter.length; i++) {
+            $("#"+allFilter[i]).hide();
+        }
+
+        $("#"+name).fadeIn("fast");
+    });
+}
+
+showContentFilter("filters");
+
 
 /*Reply comments*/
 $(function() {
