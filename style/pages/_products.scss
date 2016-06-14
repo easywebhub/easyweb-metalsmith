@@ -226,6 +226,9 @@
     content: "\e649";
     @extend .themify-font;
   }
+  .accordion-title.down::before{
+    content: '\e64b';
+  }
   .is-active > .accordion-title::before{
     content: "\e64b";
   }

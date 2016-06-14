@@ -8,7 +8,7 @@
 
 
 .moveStep{
-  margin: 0.7rem 0 0.5rem;
+  margin: 0.7rem 0 1rem;
   overflow: hidden;
   counter-reset: step;
   display: flex;
@@ -51,12 +51,27 @@
       }
     }
 
-    &.active{
+    &.active {
       &:before{
         background: $primary-color;
       }
       &:after{
         background: $primary-color;
+      }
+    }
+    &.is-active{
+      &:before{
+        background: $primary-color;
+      }
+    }
+    &.tabs-title{
+      >a{
+        display: block;
+        padding: inherit;
+        font-size: 1rem;
+        line-height: inherit;
+        background: transparent;
+        color: $secondary-color
       }
     }
   }

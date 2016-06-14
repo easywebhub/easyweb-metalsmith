@@ -57,8 +57,7 @@
 
 @import 'animate';
 
-@import "pages/search";
-@import "pages/sale";
+
 
 @import 'main';
 
@@ -66,8 +65,7 @@
 @import 'components/navigation';
 @import 'components/searchbar';
 @import 'components/slider';
-@import 'components/products';
-@import 'components/payment';
+
 @import 'components/deal';
 @import 'components/footer';
 
@@ -77,3 +75,11 @@
 @import 'components/loading';
 @import 'components/modal';
 @import 'components/comments';
+
+
+
+@import "pages/search";
+@import "pages/sale";
+@import 'pages/products';
+@import 'pages/payment';
+@import 'pages/tragop';
