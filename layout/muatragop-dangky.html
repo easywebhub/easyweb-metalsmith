@@ -5,154 +5,148 @@
     <a href="">MUA TRẢ GÓP</a>
 </h2>
 
-<div class="des-accordion">
+{{> muatragop-menu}}
 
-    <ul class="accordion">
-        <li class="accordion-item is-active">
-            <a href="#" class="accordion-title down"><i class="ti-panel"></i>
-                Thủ tục - quy trình</a>
-
-        </li>
-
-        <li class="accordion-item ">
-            <a href="#" class="accordion-title down"><i class="ti-image "></i>
-                Đăng ký mua trả góp</a>
-            <div class="" data-tab-content>
+<div class="product__info">
+    <div class="row align-middle">
+        <div class="small-4 columns">
+            <div class="product__image">
+                <img src="assets/img/product/product1.jpg">
             </div>
-        </li>
+        </div>
+        <div class="small-8 columns">
+            <h3 class="product__name">Iphone 6s 16Gb (IP-J710F)</h3>
+            <div class="product__price">
+                <span class="product__price--new">13,890,000đ</span>
+            </div>
+            <div class="product__km">
+                <input type="checkbox" id="load_more" role="button">
+
+                <div class="product__sale">
+                    <p>
+                        - Thêm 99.000đ sở hữu <strong><a href="https://vienthonga.vn/the-cao-sim-so#simdatakhung">Sim Data
+                        Khủng</a></strong> trị giá 20.000.000đ: <br>&nbsp;&nbsp;+ Sim Vinaphone trả trước 10 số<br>&nbsp;&nbsp;+
+                        Khuyến mãi 3GB đến 6GB data 3G mỗi tháng x 12 tháng<br>&nbsp;&nbsp;+ Khuyến mãi (300 phút gọi không
+                        giới hạn trên 1 cuộc gọi + 150 tin nhắn) mỗi tháng x 12 tháng
+
+                </div>
+
+                <label for="load_more" onclick=""><span>Xem khuyến mãi <i
+                        class="ti-angle-down"></i></span><span>Ẩn khuyến mãi <i class="ti-angle-up"></i></span></label>
+            </div>
 
 
-        <li class="accordion-item ">
-            <a href="#" class="accordion-title down"><i
-                    class="ti-video-camera "></i> Khuyến mãi trả góp</a>
+        </div>
+    </div>
 
-        </li>
+    <div class="row">
+        <div class="small-12 columns">
+            <h4>Vui lòng cung cấp thêm thông tin (để xét duyệt trả góp)
+            </h4>
 
-    </ul>
+           <p>Giấy tờ bạn phải có : </p>
+            <div class="form-line label-inline">
+                <input type="radio" name="giayTo" value="" id="giayTo1"><label for="giayTo1">CMND + Hộ khẩu hoặc Bằng lái (Duyệt nhanh, lãi suất cao)</label>
+            </div>
+
+            <div class="form-line label-inline">
+                <input type="radio" name="giayTo" value="" id="giayTo2"><label for="giayTo2">CMND + Hộ khẩu + Hóa đơn điện nước (Lãi suất thấp)</label>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
-
-<ul class="moveStep" data-tabs id="thutuc-quytrinh">
-    <li class="tabs-title is-active"><a href="#thutuctragop" aria-selected="true">Thủ tục <br> trả góp</a></li>
-    <li class="tabs-title"><a href="#quytrinhtragop">Quy trình <br> trả góp</a></li>
+<ul class="moveStep">
+    <li class="is-active"><a href="" >Chọn đơn vị <br> trả góp</a></li>
+    <li class=""><a href="">Thông tin <br> khách hàng</a></li>
+    <li class=""><a href="">Phương thức <br> nhận hàng</a></li>
 </ul>
 
 
-<div class="tabs-content" data-tabs-content="thutuc-quytrinh">
-    <div class="tabs-panel is-active no-padding" id="thutuctragop">
+<div id="tragop-step-1" class="tragop-step">
+    <h3 class="moveStep__title">
+        <span>1. Chọn đơn vị trả góp</span>
+    </h3>
 
-        <h3 class="moveStep__title">
-            <span>1. Thủ tục trả góp</span>
-        </h3>
-
-
-        <div class="thutucTragop">
-            <div class="row">
-                <div class="small-3">
-                    <img src="https://vienthonga.vn/Content/images/tragop/home-credit-logo.jpg" alt="">
-                </div>
-
-                <div class="small-8 small-offset-1">
-                    - Điều kiện: <span class="color-primary"> Tuổi 18 - 60 </span> <br>
-                    - Thủ tục cần chuẩn bị <br>
-                    <span class="color-gray">+ CMND</span>
-                    <span class="color-gray">+ Hộ khẩu (có thể thay bằng lái xe <br>
-                    nếu khoản vay dưới 10 triệu)</span> <br>
-                    - Giá trị sản phẩm: <span class="color-primary">>= 1.25 triệu </span><br>
-                    - Trả trước: <span class="color-primary">20% </span><br>
-                    - Thời gian duyệt hồ sơ: <span class="color-primary">15-30 phút </span><br>
-                </div>
-            </div>
+    <div class="gutter">
+        <div class="form-line label-inline">
+            <input type="radio" name="donVi" value="" id="donVi1"><label for="donVi1"><img src="https://vienthonga.vn/Content/images/tragop/home-credit-logo.jpg" alt="" width="100"></label>
         </div>
-        <div class="thutucTragop">
-            <div class="row">
-                <div class="small-3">
-                    <img src="https://vienthonga.vn/Content/images/tragop/hdf-logo.png" alt="">
-                </div>
-
-                <div class="small-8 small-offset-1">
-                    - Điều kiện: <span class="color-primary"> Tuổi 18 - 60 </span> <br>
-                    - Thủ tục cần chuẩn bị <br>
-                    <span class="color-gray">+ CMND</span>
-                    <span class="color-gray">+ Hộ khẩu (có thể thay bằng lái xe <br>
-                    nếu khoản vay dưới 10 triệu)</span> <br>
-                    - Giá trị sản phẩm: <span class="color-primary">>= 1.25 triệu </span><br>
-                    - Trả trước: <span class="color-primary">20% </span><br>
-                    - Thời gian duyệt hồ sơ: <span class="color-primary">15-30 phút </span><br>
-                </div>
-            </div>
+        <div class="form-line label-inline">
+            <input type="radio" name="donVi" value="" id="donVi2"><label for="donVi2"><img src="https://vienthonga.vn/Content/images/tragop/hdf-logo.png" alt="" width="100"></label>
         </div>
-
-        <div class="thutucTragop">
-
-            <div class="row">
-                <div class="small-3">
-                    <img src="https://vienthonga.vn/Content/images/tragop/acs-logo.jpg" alt="">
-                </div>
-
-                <div class="small-8 small-offset-1">
-                    - Điều kiện: <span class="color-primary"> Tuổi 18 - 60 </span> <br>
-                    - Thủ tục cần chuẩn bị <br>
-                    <span class="color-gray">+ CMND</span>
-                    <span class="color-gray">+ Hộ khẩu (có thể thay bằng lái xe <br>
-                    nếu khoản vay dưới 10 triệu)</span> <br>
-                    - Giá trị sản phẩm: <span class="color-primary">>= 1.25 triệu </span><br>
-                    - Trả trước: <span class="color-primary">20% </span><br>
-                    - Thời gian duyệt hồ sơ: <span class="color-primary">15-30 phút </span><br>
-                </div>
-            </div>
+        <div class="form-line label-inline">
+            <input type="radio" name="donVi" value="" id="donVi3"><label for="donVi3"><img src="https://vienthonga.vn/Content/images/tragop/acs-logo.jpg" alt="" width="100"></label>
         </div>
-
     </div>
-    <div class="tabs-panel no-padding" id="quytrinhtragop">
 
-        <h3 class="moveStep__title">
-            <span>2. Quy trình trả góp</span>
-        </h3>
+    <div class=" form-border">
+        <div class="row align-middle">
+            <div class="small-6 columns">
+                <div class="form-space">Hình thức</div>
+            </div>
+            <div class="small-6 columns">
+                <select class="">
+                    <option value="">Có lãi suất</option>
+                </select>
+            </div>
 
+            <div class="small-6 columns">
+                <div class="form-space">Trả trước</div>
+            </div>
+            <div class="small-6 columns">
+                <select class="">
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="40">40%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                </select>
+            </div>
+
+            <div class="small-6 columns">
+                <div class="form-space">Thời hạn vay</div>
+            </div>
+            <div class="small-6 columns">
+                <select class="">
+                    <option value="">3 tháng</option>
+                    <option value="">6 tháng</option>
+                    <option value="">12 tháng</option>
+                </select>
+            </div>
+
+            <div class="small-6 columns">
+                <div class="form-space">Khách hàng trả trước</div>
+            </div>
+            <div class="small-6 columns">
+                4,350,000 đ
+            </div>
+
+            <div class="small-6 columns">
+                <div class="form-space">Số tiền trả góp</div>
+            </div>
+            <div class="small-6 columns">
+                3,350,000 đ
+            </div>
+
+            <div class="small-6 columns">
+                <div class="form-space">Tổng góp trả trước</div>
+            </div>
+            <div class="small-6 columns">
+                <span class="color-orange">7,810,000 đ</span>
+            </div>
+        </div>
     </div>
-</div>
 
 
-<div class="sale-list">
-    <figure class="sale-item">
-        <img src="assets/img/slider/slider1.jpg" alt="">
-        <figcaption>
-            <h4>Mua linh phụ kiện giá sốc chưa từng có</h4>
-        </figcaption>
-
-        <a href="khuyenmai-chitiet.html" class="a-absolute"></a>
-    </figure>
-
-    <figure class="sale-item">
-        <img src="assets/img/slider/slider2.jpg" alt="">
-        <figcaption>
-            <h4>Mua linh phụ kiện giá sốc chưa từng có</h4>
-        </figcaption>
-
-        <a href="khuyenmai-chitiet.html" class="a-absolute"></a>
-    </figure>
-
-    <figure class="sale-item">
-        <img src="assets/img/slider/slider3.jpg" alt="">
-        <figcaption>
-            <h4>Mua linh phụ kiện giá sốc chưa từng có</h4>
-        </figcaption>
-
-        <a href="khuyenmai-chitiet.html" class="a-absolute"></a>
-    </figure>
 
 </div>
 
 
-<div class="sk-wave">
-    <div class="sk-rect sk-rect1"></div>
-    <div class="sk-rect sk-rect2"></div>
-    <div class="sk-rect sk-rect3"></div>
-    <div class="sk-rect sk-rect4"></div>
-    <div class="sk-rect sk-rect5"></div>
-</div>
+
 
 
 {{/content}}

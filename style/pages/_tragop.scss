@@ -1,6 +1,21 @@
 .thutucTragop{
   padding: 20px 10px;
   border-bottom: 1px solid $color-border1;
+}
 
+.tragop-step{
+  background: white;
+}
 
+.form-border{
+  border: 1px solid $color-border1;
+  padding: 15px 5px;
+  margin: 10px;
+  select{
+    margin-bottom: 0;
+  }
+}
+
+.form-space{
+  padding: 13px 0;
 }

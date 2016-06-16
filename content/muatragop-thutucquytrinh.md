@@ -2,6 +2,7 @@
 {
   "title": "Vien thong A",
   "layout": "muatragop-thutucquytrinh.html",
+  "active":"muatragop-thutucquytrinh",
   "listItem": [
     {
       "name": "iPhone 5S 16GB Gold",
