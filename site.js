@@ -21,7 +21,7 @@ const site = {
             title: 'EasyWeb website',
             description: 'description of this site',
             keywords: 'easy web, thiết kế web đơn giản,',
-            author: 'vinaas ltd.,co', 
+            author: 'vinaas ltd.,co',
             url: 'http://handy.themes.zone'
         }
     }
@@ -88,7 +88,7 @@ site.metalsmith = {
             'pattern': 'blog/**/*.html',
             'sortBy':  'date',
             'reverse': true,
-            'limit':   2
+            'limit':   5
         },
         // collection theo key trong metadata `"collection": "baiviet"`
         'baiviet': {
@@ -98,14 +98,14 @@ site.metalsmith = {
     },
 
     'metalsmith-permalinks':    {
-        '_enable':  true,
+        '_enable':  false,
         // default config
         'pattern':  ':title',
         'relative': false,
         // config rieng cho 1 collection
         linksets:   [{
             match:   {collection: 'blog'},
-            pattern: 'aaa-:title'
+            pattern: 'blog/:title'
         }]
     },
 
@@ -113,22 +113,25 @@ site.metalsmith = {
         '_enable': true,
         'collections.blog':    {
             'perPage':   1,
-            'layout':    'blog.html',
-            'first':     'blog/index.html',
-            'path':      'blog/:num/index.html',
-            'noPageOne': true
+            'layout':    'blog-paging.html',
+            'first':     'blog-paging/index.html',
+            'path':      'blog-paging/:num/index.html',
+            'noPageOne': true,
+            'pageMetadata': {
+              'title': 'Title of metalsmith-pagination file site.js'
+            }
         },
-        // test filter
-        'collections.baiviet': {
-            'perPage':   1,
-            'layout':    'blog.html',
-            'first':     'baiviet/index.html',
-            'path':      'baiviet/:num/index.html',
-            'filter':    meta => {
-                return meta.dacbiet === false;
-            },
-            'noPageOne': true
-        }
+        // // test filter
+        // 'collections.baiviet': {
+        //     'perPage':   1,
+        //     'layout':    'blog.html',
+        //     'first':     'baiviet/index.html',
+        //     'path':      'baiviet/:num/index.html',
+        //     'filter':    meta => {
+        //         return meta.dacbiet === false;
+        //     },
+        //     'noPageOne': true
+        // }
     },
 
     'metalsmith-layouts':       {
