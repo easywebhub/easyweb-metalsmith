@@ -2,11 +2,6 @@
   {{#content "main"}}
 
     <h3>{{title}}</h3>
-    <h3>{{description}}</h3>
-    {{#each collections.blog}}
-      <h3> <a href="/{{path}}" >{{this.title}}</a>  </h3>
-    {{/each}}
-
     <ul>
     {{#each pagination.files}}
       <li>
