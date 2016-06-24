@@ -4,6 +4,6 @@
 "url": "/blog",
 "description": "trang blog",
 "layout": "blog.html",
-"permalink": false,
+"permalink": false
 }
 ---
