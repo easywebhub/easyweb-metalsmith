@@ -88,7 +88,6 @@ site.metalsmith = {
             'pattern': 'blog/**/*.html',
             'sortBy':  'date',
             'reverse': true,
-            'limit':   5
         },
         // collection theo key trong metadata `"collection": "baiviet"`
         'baiviet': {
@@ -97,23 +96,13 @@ site.metalsmith = {
         }
     },
 
-    'metalsmith-permalinks':    {
-        '_enable':  false,
-        // default config
-        'pattern':  ':title',
-        'relative': false,
-        // config rieng cho 1 collection
-        linksets:   [{
-            match:   {collection: 'blog'},
-            pattern: 'blog/:title'
-        }]
-    },
+
 
     'metalsmith-pagination':    {
         '_enable': true,
         'collections.blog':    {
             'perPage':   1,
-            'layout':    'blog-paging.html',
+            'layout':    'blog.html',
             'first':     'blog-paging/index.html',
             'path':      'blog-paging/:num/index.html',
             'noPageOne': true,
@@ -134,6 +123,18 @@ site.metalsmith = {
         // }
     },
 
+    'metalsmith-permalinks':    {
+        '_enable':  true,
+        // default config
+        'pattern':  ':title',
+        'relative': false,
+        // config rieng cho 1 collection
+        linksets:   [{
+            match:   {collection: 'blog'},
+            pattern: 'blog/:title'
+        }]
+    },
+    
     'metalsmith-layouts':       {
         '_enable':   true,
         'engine':    'handlebars',
