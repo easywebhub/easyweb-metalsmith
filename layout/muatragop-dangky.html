@@ -1,11 +1,4 @@
-{{#extend "default"}}
-{{#content "body"}}
-
-<h2 class="section-title">
-    <a href="">MUA TRẢ GÓP</a>
-</h2>
-
-{{> muatragop-menu}}
+{{#extend "default"}} {{#content "body"}} {{> muatragop-menu}}
 
 <div class="product__info">
     <div class="row align-middle">
@@ -25,9 +18,8 @@
                 <div class="product__sale">
                     <p>
                         - Thêm 99.000đ sở hữu <strong><a href="https://vienthonga.vn/the-cao-sim-so#simdatakhung">Sim Data
-                        Khủng</a></strong> trị giá 20.000.000đ: <br>&nbsp;&nbsp;+ Sim Vinaphone trả trước 10 số<br>&nbsp;&nbsp;+
-                        Khuyến mãi 3GB đến 6GB data 3G mỗi tháng x 12 tháng<br>&nbsp;&nbsp;+ Khuyến mãi (300 phút gọi không
-                        giới hạn trên 1 cuộc gọi + 150 tin nhắn) mỗi tháng x 12 tháng
+                        Khủng</a></strong> trị giá 20.000.000đ: <br>&nbsp;&nbsp;+ Sim Vinaphone trả trước 10 số<br>&nbsp;&nbsp;+ Khuyến mãi 3GB đến 6GB data 3G mỗi tháng x 12 tháng<br>&nbsp;&nbsp;+ Khuyến mãi (300 phút gọi không giới hạn trên 1 cuộc gọi
+                        + 150 tin nhắn) mỗi tháng x 12 tháng
 
                 </div>
 
@@ -44,7 +36,7 @@
             <h4>Vui lòng cung cấp thêm thông tin (để xét duyệt trả góp)
             </h4>
 
-           <p>Giấy tờ bạn phải có : </p>
+            <p class="text-gray">Giấy tờ bạn phải có : </p>
             <div class="form-line label-inline">
                 <input type="radio" name="giayTo" value="" id="giayTo1"><label for="giayTo1">CMND + Hộ khẩu hoặc Bằng lái (Duyệt nhanh, lãi suất cao)</label>
             </div>
@@ -52,16 +44,18 @@
             <div class="form-line label-inline">
                 <input type="radio" name="giayTo" value="" id="giayTo2"><label for="giayTo2">CMND + Hộ khẩu + Hóa đơn điện nước (Lãi suất thấp)</label>
             </div>
+
+            <p class="text-gray">Lưu ý: - Số tiền dưới đây chỉ mang tính tham khảo <br> - Bạn sẽ được tư vấn thêm sau khi đặt hàng thành công.</p>
         </div>
 
     </div>
 
 </div>
 
-<ul class="moveStep">
-    <li class="is-active"><a href="" >Chọn đơn vị <br> trả góp</a></li>
-    <li class=""><a href="">Thông tin <br> khách hàng</a></li>
-    <li class=""><a href="">Phương thức <br> nhận hàng</a></li>
+<ul class="moveStep" id="tragop-progress">
+    <li class="active">Chọn đơn vị <br> trả góp</li>
+    <li class="">Thông tin <br> khách hàng</li>
+    <li class="">Phương thức <br> nhận hàng</li>
 </ul>
 
 
@@ -71,18 +65,18 @@
     </h3>
 
     <div class="gutter">
-        <div class="form-line label-inline">
+        <div class="form-line more label-inline">
             <input type="radio" name="donVi" value="" id="donVi1"><label for="donVi1"><img src="https://vienthonga.vn/Content/images/tragop/home-credit-logo.jpg" alt="" width="100"></label>
         </div>
-        <div class="form-line label-inline">
+        <div class="form-line more label-inline">
             <input type="radio" name="donVi" value="" id="donVi2"><label for="donVi2"><img src="https://vienthonga.vn/Content/images/tragop/hdf-logo.png" alt="" width="100"></label>
         </div>
-        <div class="form-line label-inline">
+        <div class="form-line more label-inline">
             <input type="radio" name="donVi" value="" id="donVi3"><label for="donVi3"><img src="https://vienthonga.vn/Content/images/tragop/acs-logo.jpg" alt="" width="100"></label>
         </div>
     </div>
 
-    <div class=" form-border">
+    <div class=" form-border bottom-grey">
         <div class="row align-middle">
             <div class="small-6 columns">
                 <div class="form-space">Hình thức</div>
@@ -138,16 +132,156 @@
             <div class="small-6 columns">
                 <span class="color-orange">7,810,000 đ</span>
             </div>
+
         </div>
     </div>
 
+    <div class="row ">
+        <div class="small-6 columns">
+        </div>
+        <div class="small-6 columns text-right">
+            <a href="" class="button alert tragop-next">Tiếp tục <i class="ti-angle-right"></i></a>
+        </div>
+    </div>
 
+</div>
+
+
+<div id="tragop-step-2" class="tragop-step hideBlock">
+    <h3 class="moveStep__title">
+        <span>2. Thông tin khách hàng</span>
+    </h3>
+
+    <div class="formDathang__content">
+
+        <div class="form-line">
+            <input type="radio" name="sex" value="" checked="" id="male"><label for="male">Anh</label>
+            <input type="radio" name="sex" value="" id="female"><label for="female">Chị</label>
+        </div>
+
+        <div class="form-line row align-middle">
+                <div class="small-4">Họ tên <span class="color-red">(*)</span></div>
+                <div class="small-8"><input type="text" placeholder="Họ và tên"></div>
+        </div>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Ngày sinh <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder="Họ và tên"></div>
+        </div>
+        <div class="form-line row align-middle">
+            <div class="small-4">Điện thoại <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder=""></div>
+        </div>
+        <div class="form-line row align-middle">
+            <div class="small-4">Email <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="email" placeholder="Địa chỉ email"></div>
+        </div>
+        <div class="form-line row align-middle">
+            <div class="small-4">Số CMND <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder=""></div>
+        </div>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Nghề nghiệp <span class="color-red">(*)</span></div>
+            <div class="small-8">
+                <select name="" id="">
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Địa chỉ <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder=""></div>
+        </div>
+        <div class="form-line row align-middle">
+            <div class="small-4">Nơi ở <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder=""></div>
+        </div>
+        <div class="form-line row align-middle">
+            <div class="small-4">Hộ khẩu <span class="color-red">(*)</span></div>
+            <div class="small-8"><input type="text" placeholder=""></div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row ">
+        <div class="small-6 columns">
+            <a href="" class="button button-gray tragop-prev"><i class="ti-angle-left"></i> Quay lại</a>
+        </div>
+        <div class="small-6 columns text-right">
+            <a href="" class="button alert tragop-next">Tiếp tục <i class="ti-angle-right"></i></a>
+        </div>
+    </div>
+
+</div>
+
+<div id="tragop-step-3" class="tragop-step hideBlock">
+    <h3 class="moveStep__title">
+        <span>3. Phương thức nhận hàng</span>
+    </h3>
+
+
+
+    <div class="formDathang__content">
+        <h4>Vui lòng chọn siêu thị bên dưới để nhận hàng</h4>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Thành phố <span class="color-red">(*)</span></div>
+            <div class="small-8">
+                <select name="" id="">
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Quận huyện <span class="color-red">(*)</span></div>
+            <div class="small-8">
+                <select name="" id="">
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                    <option value="">IT</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-line row align-middle">
+            <div class="small-4">Chi nhánh <span class="color-red">(*)</span></div>
+            <div class="small-8">
+                <select multiple>
+                    <option value="showboat">Showboat</option>
+                    <option value="redwing">Redwing</option>
+                    <option value="narcho">Narcho</option>
+                    <option value="hardball">Hardball</option>
+                </select>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row ">
+        <div class="small-6 columns">
+            <a href="" class="button button-gray tragop-prev"><i class="ti-angle-left"></i> Quay lại</a>
+        </div>
+        <div class="small-6 columns text-right">
+            <a href="" class="button alert">Hoàn tất đăng ký</a>
+        </div>
+    </div>
 
 </div>
 
 
 
 
-
-{{/content}}
-{{/extend}}
+{{/content}} {{/extend}}

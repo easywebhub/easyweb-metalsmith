@@ -57,6 +57,9 @@ html {
 .color-orange{
   color: $color-orange;
 }
+.color-red{
+  color: $color-red;
+}
 
 .themify-font{
   font-family: 'themify';
@@ -81,6 +84,10 @@ html {
   display: block;
 }
 
+.button-gray{
+  @include button(false, darken($color-border1,10%), darken($color-border1, 20%), $secondary-color, "solid");
+}
+
 .a-absolute{
   position: absolute;
   width: 100%;
@@ -88,6 +95,10 @@ html {
   opacity:0;
   top: 0;
   left: 0;
+}
+
+.text-gray{
+  color: $color-gray;
 }
 
 .clearlist{

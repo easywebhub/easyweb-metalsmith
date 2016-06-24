@@ -192,9 +192,7 @@
   }
 }
 
-.button-gray{
-    @include button("true", darken($color-border1,10%), darken($color-border1, 20%), $secondary-color, "solid");
-}
+
 
 .product__button--call{
   margin-bottom: 10px;
@@ -229,12 +227,45 @@
   .accordion-title.down::before{
     content: '\e64b';
   }
+
+  .accordion-title.none::before{
+    display: none;
+  }
   .is-active > .accordion-title::before{
     content: "\e64b";
   }
   .is-active{
     .accordion-title{
       background: lighten($light-gray,5%);
+    }
+  }
+  &.inlineBlock{
+    .accordion{
+      display: flex;
+
+      .accordion-item{
+        flex: 1;
+        border-right:1px solid $color-border1;
+        border-bottom: 1px solid $color-border1;
+
+      }
+      .is-active{
+        .accordion-title{
+          background: $light-gray   ;
+          color: $secondary-color;
+        }
+      }
+      .accordion-title{
+        padding: 1.25rem 0.5rem;
+        text-align: center;
+        text-transform: inherit;
+        border: none;
+        border-radius: 0;
+      }
+      .icon{
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+      }
     }
   }
 }

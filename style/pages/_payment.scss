@@ -173,7 +173,13 @@
 
 .form-line{
   margin-bottom: 10px;
+  &.more{
+    margin-bottom: 20px;
+  }
 }
+
+
+
 .product__km{
   .product__sale {
     max-height: 0px;

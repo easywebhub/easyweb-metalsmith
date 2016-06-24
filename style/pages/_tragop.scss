@@ -1,21 +1,44 @@
-.thutucTragop{
+.thutucTragop {
   padding: 20px 10px;
   border-bottom: 1px solid $color-border1;
 }
 
-.tragop-step{
+.tragop-step {
   background: white;
-}
-
-.form-border{
-  border: 1px solid $color-border1;
-  padding: 15px 5px;
-  margin: 10px;
-  select{
-    margin-bottom: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  .form-line{
+    input, select{
+      margin-bottom: 0;
+    }
   }
 }
 
-.form-space{
-  padding: 13px 0;
+.form-border {
+  border: 1px solid $color-border1;
+  padding: 10px 5px 0;
+  margin: 10px;
+  select {
+    margin-bottom: 0;
+  }
+  &.bottom-grey {
+    position: relative;
+    .columns {
+      z-index: 2;
+    }
+    &:after {
+      content: "";
+      height: 50px;
+      width: 100%;
+      bottom: 0;
+      background: $color-border1;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}
+
+.form-space {
+  padding: 11px 0;
 }

@@ -2,23 +2,27 @@ function SearchToTop() {
     var top = document.getElementById("searchNav").offsetTop;
     window.scrollTo(0, top);
 }
+function tragopToTop(){
+    var top = document.getElementById("tragop-progress").offsetTop;
+    window.scrollTo(0, top - 10);
+}
 
 /**
  * This module sets up the search bar.
  */
 
-!function() {
+!function () {
 
     var source = {
         // Only show 10 results at once
         limit: 10,
 
         // Function to fetch result list and then find a result;
-        source: function(query, sync, async) {
+        source: function (query, sync, async) {
             query = query.toLowerCase();
 
-            $.getJSON('listItem.json', function(data, status) {
-                async(data.filter(function(elem, i, arr) {
+            $.getJSON('listItem.json', function (data, status) {
+                async(data.filter(function (elem, i, arr) {
                     var name = elem.name.toLowerCase();
                     var terms = [name, name.replace('-', '')].concat(elem.tags || []);
                     for (var i in terms) if (terms[i].indexOf(query) > -1) return true;
@@ -28,25 +32,25 @@ function SearchToTop() {
         },
 
         // Name to use for the search result itself
-        display: function(item) {
+        display: function (item) {
             return item.name;
         },
 
         templates: {
             // HTML that renders if there are no results
-            notFound: function(query) {
+            notFound: function (query) {
                 return '<div class="tt-empty">Không tìm thấy kết quả cho "' + query.query + '".</div>';
             },
             // HTML that renders for each result in the list
-            suggestion: function(item) {
-                return '<div><span class="name">' + item.name +  '</span></span> <span class="price">' + item.price.new + ' đ</span></div>';
+            suggestion: function (item) {
+                return '<div><span class="name">' + item.name + '</span></span> <span class="price">' + item.price.new + ' đ</span></div>';
             }
         }
     }
 // Search
     $('[data-products-search]')
-        .typeahead({ highlight: false }, source)
-        .on('typeahead:select', function(e, sel) {
+        .typeahead({highlight: false}, source)
+        .on('typeahead:select', function (e, sel) {
             window.location.href = sel.link;
         });
 
@@ -58,7 +62,7 @@ function SearchToTop() {
 }();
 
 
-if($(".swiper-container").length != 0){
+if ($(".swiper-container").length != 0) {
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -69,8 +73,7 @@ if($(".swiper-container").length != 0){
 }
 
 
-
-if($(".swiper-popover").length != 0){
+if ($(".swiper-popover").length != 0) {
     var swiperPopover = new Swiper('.swiper-popover', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
@@ -89,24 +92,19 @@ if($(".swiper-popover").length != 0){
 }
 
 
-
-
-
-
-
 var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
     'padding': 230,
     'tolerance': 70,
-    'touch' : false,
+    'touch': false,
     'duration': 400
 
 });
 
-if(document.querySelector('.toggle-button') !== null){
+if (document.querySelector('.toggle-button') !== null) {
 // Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function(event) {
+    document.querySelector('.toggle-button').addEventListener('click', function (event) {
         event.preventDefault()
         slideout.toggle();
     });
@@ -146,19 +144,19 @@ if ($('.countdown').length) {
 }
 
 
-!(function(){
+!(function () {
     var main = $("#panel");
     var scrollPosition = $(window).scrollTop();
 
-    $(".popover-trigger").each(function() {
+    $(".popover-trigger").each(function () {
         var $this = $(this);
         var id = $this.attr('data-popover'),
-            popover = $("#"+id),
-            close  = popover.find(".popover__close");
+            popover = $("#" + id),
+            close = popover.find(".popover__close");
 
-        function removeOverlay(){
+        function removeOverlay() {
             popover.addClass("popover-visuallyhidden");
-            popover.one('transitionend', function(e) {
+            popover.one('transitionend', function (e) {
                 popover.addClass('popover-hidden');
             });
             setTimeout(function () {
@@ -170,20 +168,23 @@ if ($('.countdown').length) {
             }, 100);
 
         }
-        $this.click(function(e){
+
+        $this.click(function (e) {
             e.preventDefault();
             scrollPosition = $(window).scrollTop();
 
             // main.css("display", "none");
             main.addClass("popover-visuallyhidden");
-            main.one('transitionend', function(e) {
+            main.one('transitionend', function (e) {
                 main.addClass('popover-hidden');
                 $(window).scrollTop(0);
             });
 
             setTimeout(function () {
                 popover.removeClass('popover-hidden');
-                swiperPopover.update();
+                if (swiperPopover != undefined) {
+                    swiperPopover.update();
+                }
                 setTimeout(function () {
                     popover.removeClass('popover-visuallyhidden');
                 }, 20);
@@ -193,10 +194,7 @@ if ($('.countdown').length) {
             e.preventDefault();
             removeOverlay();
         })
-
-
     });
-
 })();
 
 // Load video
@@ -206,80 +204,81 @@ $('.youtube-thumbnail').on('click', function () {
     player.cueVideoById(url);
 });
 
-function showContentCheckbox(nameCheckbox){
-     var allCheckbox = [];
-    var selection = $("input[name='" + nameCheckbox +"']" );
-    selection.each(function(){
+function showContentCheckbox(nameCheckbox) {
+    var allCheckbox = [];
+    var selection = $("input[name='" + nameCheckbox + "']");
+    selection.each(function () {
         allCheckbox.push($(this).data("chosen"));
     });
 
-    selection.on( "change", function() {
+    selection.on("change", function () {
 
-        var name =$("#"+$(this).data("chosen")) ;
+        var name = $("#" + $(this).data("chosen"));
 
         if (!this.checked) {
             name.hide();
             return
-        };
+        }
+        ;
 
         for (var i = 0; i < allCheckbox.length; i++) {
-            $("#"+allCheckbox[i]).hide();
+            $("#" + allCheckbox[i]).hide();
         }
         name.fadeIn();
     });
 }
-showContentCheckbox("delivery");
-showContentCheckbox("paymentType");
-showContentCheckbox("masterCard");
+
+showContentCheckbox("RecieveType");
+showContentCheckbox("PaymentType");
+showContentCheckbox("PaymentMethod");
 showContentCheckbox("xuathoadon");
 
 
-function showContentFilter(nameFilter){
+
+
+
+function showContentFilter(nameFilter) {
     var allFilter = [];
-    var selection = $("[name='" + nameFilter +"']" );
-    selection.each(function(){
+    var selection = $("[name='" + nameFilter + "']");
+    selection.each(function () {
         allFilter.push($(this).data("filter"));
     });
 
-    selection.on( "click", function(e) {
+    selection.on("click", function (e) {
         $this = $(this);
-        var name = $("#"+$this.data("filter"));
+        var name = $("#" + $this.data("filter"));
 
-        if($this.hasClass("active")){
+        if ($this.hasClass("active")) {
             name.fadeOut("fast");
             $this.removeClass("active");
             return;
-        } else{
+        } else {
             $this.siblings().removeClass("active");
         }
 
         $this.addClass("active");
 
         for (var i = 0; i < allFilter.length; i++) {
-            $("#"+allFilter[i]).hide();
+            $("#" + allFilter[i]).hide();
         }
         name.fadeIn("fast");
     });
 }
 
 showContentFilter("filters");
-
-
 /*Reply comments*/
-$(function() {
-    $(".reply-comment-btn").click(function(e){
+$(function () {
+    $(".reply-comment-btn").click(function (e) {
         e.preventDefault();
         $(this).parent().children(".comment-replay").slideToggle("fast");
     });
 });
 
-
-
 /*End reply comments*/
 
 
 /*CHECK FORM DAT HANG STEP BY STEP, ap dung sau*/
-$(function() {
+$(function () {
     var formDathang1 = $("#formDathang1"),
         formDathang2 = $("#formDathang2"),
         formDathang3 = $("#formDathang3");
@@ -289,7 +288,7 @@ $(function() {
         formDathang2.fadeIn();
         $("body").addClass("formDathang-step2");
     });
-    formDathang1.on("submit", function(ev) {
+    formDathang1.on("submit", function (ev) {
         ev.preventDefault();
     });
 
@@ -298,7 +297,7 @@ $(function() {
         formDathang3.fadeIn();
         $("body").removeClass("formDathang-step2").addClass("formDathang-step3");
     });
-    formDathang2.on("submit", function(ev) {
+    formDathang2.on("submit", function (ev) {
         ev.preventDefault();
     });
 });
@@ -306,3 +305,30 @@ $(function() {
 
 /*end CHECK FORM DAT HANG STEP BY STEP, ap dung sau*/
 
+
+// Mua tra gop
+$(function () {
+    var current_tragop, next_tragop, previous_tragop;
+
+    $(".tragop-next").click(function (e) {
+        e.preventDefault();
+
+        $this = $(this);
+        current_tragop = $this.parents(".tragop-step").hide();
+        next_tragop = $this.parents(".tragop-step").next().fadeIn();
+        $("#tragop-progress li").eq($(".tragop-step").index(next_tragop)).addClass("active");
+        tragopToTop();
+    });
+
+    $(".tragop-prev").click(function (e) {
+        e.preventDefault();
+        $this = $(this);
+        current_tragop = $this.parents(".tragop-step").hide();
+        previous_tragop = $this.parents(".tragop-step").prev().fadeIn();
+        $("#tragop-progress li").eq($(".tragop-step").index(current_tragop)).removeClass("active");
+        tragopToTop();
+    });
+});
+
+
+// end Mua tra gop
