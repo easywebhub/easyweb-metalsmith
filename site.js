@@ -15,16 +15,15 @@ const site = {
     // ở chế độ production cũng sẽ không minify
     assetRoot: './asset',
 
-    // global metadata của site
-    metadata: {
-        site: {
-            title: 'EasyWeb website',
-            description: 'description of this site',
-            keywords: 'easy web, thiết kế web đơn giản,',
-            author: 'vinaas ltd.,co',
-            url: 'http://handy.themes.zone'
-        }
-    }
+    //thư mục chứa tất các các file json chứa dữ liệu dùng chung, không định nghĩa được trong file .md
+    //gồm 3 file json chính
+    //global.json chứa thông tin chung về website
+    //menu.json chứa thông tin về menu của website
+    //footer.json chứa thông tin về footer của website
+    metadataRoot : './content/metadata'
+
+
+
 };
 
 site.script = {
@@ -62,6 +61,10 @@ site.style = {
 
 // define và config các plugin của metalsmith
 site.metalsmith = {
+    'metalsmith-metadata-directory': {
+      'directory': `${site.metadataRoot}/**/*.json`
+    },
+
     'metalsmith-drafts':        {
         '_enable': false
     },
@@ -134,7 +137,7 @@ site.metalsmith = {
             pattern: 'blog/:title'
         }]
     },
-    
+
     'metalsmith-layouts':       {
         '_enable':   true,
         'engine':    'handlebars',
