@@ -1,0 +1,26 @@
+.accordion-content.no-padding{
+  padding: 0;
+  text-align: center;
+}
+
+.item-sosanh-input{
+  text-align: center;
+  display: flex;
+ justify-content: center;
+  flex-direction: column;
+  .icon{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 5px solid $light-gray;
+    line-height: 110px;
+    text-align: center;
+    font-size: 50px;
+    color: $light-gray;
+    margin: 0 auto 15px;
+  }
+  input{
+    margin-bottom: 30px;
+  }
+}
