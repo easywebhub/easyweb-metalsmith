@@ -161,7 +161,9 @@
 
 
 .item-sosanh{
-
+  .button{
+    margin-bottom: 0;
+  }
 }
 
 
@@ -241,10 +243,26 @@
   }
   .is-active{
     .accordion-title{
-      background: lighten($light-gray,5%);
+      //background: lighten($light-gray,5%);
+      background: white;
     }
   }
-  &.inlineBlock{
+
+  .accordion-item a{
+    border: none;
+    //border-bottom: 1px solid $color-border1;
+    border-top: 1px solid $color-border1;
+  }
+
+  .accordion-title:hover, .accordion-title:focus{
+    background: white;
+  }
+  .accordion-item:last-child > :last-child {
+    border-radius: 0;
+  }
+
+
+ /* &.inlineBlock{
     .accordion{
       display: flex;
 
@@ -272,7 +290,9 @@
         font-size: 1.2rem;
       }
     }
-  }
+  }*/
+
+
 }
 
 
@@ -339,10 +359,12 @@
   display: flex;
   flex-wrap: wrap;
   background: $white;
+  border-left: 1px solid $color-border1;
   .item{
     flex: 0 0 50%;
-    border: 1px solid $color-border1;
-    margin: -1px -1px 0 0;
+    border-right: 1px solid $color-border1;
+    border-bottom: 1px solid $color-border1;
+    //margin: -1px -1px 0 0;
     &.feature{
       flex: 0 0 100%;
 
@@ -409,6 +431,7 @@
 .itemFilter{
   position: relative;
   z-index: 5;
+  @extend .box-shadow;
 }
 
 
@@ -418,7 +441,7 @@
   list-style: none;
   text-align: center;
   border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
+  //border-bottom: 1px solid $light-gray;
   background: $white;
   >li{
     cursor: pointer;
