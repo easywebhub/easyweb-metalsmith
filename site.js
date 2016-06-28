@@ -106,8 +106,8 @@ site.metalsmith = {
         'collections.blog':    {
             'perPage':   1,
             'layout':    'blog.html',
-            'first':     'blog-paging/index.html',
-            'path':      'blog-paging/:num/index.html',
+            'first':     'blog/index.html',
+            'path':      'blog/:num/index.html',
             'noPageOne': true,
             'pageMetadata': {
               'title': 'Title of metalsmith-pagination file site.js'
