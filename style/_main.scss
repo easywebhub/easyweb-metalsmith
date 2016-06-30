@@ -12,9 +12,7 @@ body{
 }
 
 html {
-  @include breakpoint(320px down) {
-    font-size: 90%;
-  }
+ 
 }
 .gutter{
   padding: 0 10px;

@@ -140,6 +140,10 @@
   background: $color-border1;
   padding: 10px 10px;
   margin: 10px 0;
+  &.km{
+    color: map-get($foundation-palette, primary);
+    font-weight: bold
+  }
 }
 .product__sale{
   max-height: 150px;
@@ -189,7 +193,7 @@
   padding: 10px 0;
   background: #fff;
   .button{
-    padding: 0.4em 1em;
+    padding: 0.2em 1em 0.3em;
     margin-bottom:10px;
     span{
       margin-top: 5px;
