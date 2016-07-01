@@ -1,7 +1,7 @@
 ---json
 {
 "title": "What's EasywebHub",
-"url": "what-is-easwebhub",
+"slug": "what-is-easwebhub",
 "description": "A",
 "layout": "blog.html",
 "date": "2016-01-21",

@@ -1,7 +1,7 @@
 ---json
 {
 "title": "Bắt đầu với EasyWebHub",
-"url": "getting-started",
+"slug": "getting-started",
 "description": "Bắt đầu với EasyWebHub",
 "layout": "blog.html",
 "date": "2015-11-04",

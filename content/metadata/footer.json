@@ -3,15 +3,15 @@
   "items" : [
       {
         "title" : "Trang chủ",
-        "url" : "/"
+        "url" : ""
       },
       {
         "title" : "Về chúng tôi",
-        "url" : "/aboutus"
+        "url" : "aboutus"
       },
       {
         "title" : "Tin tức",
-        "url" : "/news"
+        "url" : "news"
       }
   ]
 }

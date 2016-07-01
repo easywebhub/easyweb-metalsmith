@@ -1,14 +1,14 @@
 [
     {
         "name": "title",
-        "displayName": "Tiêu Đề",
+        "displayName": "title",
         "type": "Text",
         "validations": [],
         "required": false
     },
     {
-        "name": "url",
-        "displayName": "url",
+        "name": "slug",
+        "displayName": "slug",
         "type": "Text",
         "validations": [],
         "required": false
@@ -31,6 +31,20 @@
         "name": "permalink",
         "displayName": "permalink",
         "type": "Boolean",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "tags",
+        "displayName": "tags",
+        "type": "Array",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "url",
+        "displayName": "url",
+        "type": "Text",
         "validations": [],
         "required": false
     },

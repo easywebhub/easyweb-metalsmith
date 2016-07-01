@@ -7,8 +7,8 @@
         "required": false
     },
     {
-        "name": "url",
-        "displayName": "url",
+        "name": "slug",
+        "displayName": "slug",
         "type": "Text",
         "validations": [],
         "required": false

@@ -129,12 +129,12 @@ site.metalsmith = {
     'metalsmith-permalinks':    {
         '_enable':  true,
         // default config
-        'pattern':  ':url',
+        'pattern':  ':slug',
         'relative': false,
         // config rieng cho 1 collection
         linksets:   [{
             match:   {collection: 'blog'},
-            pattern: 'blog/:url'
+            pattern: 'blog/:slug'
         }]
     },
 
