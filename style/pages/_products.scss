@@ -132,9 +132,7 @@
   }
 }
 .product__onlyvta{
-  label{
-    font-size: 1rem;
-  }
+
 }
 .product__title{
   background: $color-border1;
@@ -266,7 +264,7 @@
   }
 
 
- /* &.inlineBlock{
+&.inlineBlock{
     .accordion{
       display: flex;
 
@@ -294,7 +292,7 @@
         font-size: 1.2rem;
       }
     }
-  }*/
+  }
 
 
 }

@@ -56,8 +56,8 @@
 
         <div class="productCombo__type">
             <div>Hình thức thanh toán  &nbsp;
-                <input type="radio" name="hinhthucthanhtoan" value="" id="tienmat"><label for="tienmat">Tiền mặt</label>
-                <input type="radio" name="hinhthucthanhtoan" value="" id="tragop"><label for="tragop">Trả góp</label>
+                <label class="radio-inline"><input type="radio" name="hinhthucthanhtoan" > Tiền mặt</label>
+                <label class="radio-inline"><input type="radio" name="hinhthucthanhtoan" > Trả góp</label>
             </div>
         </div>
 
@@ -83,10 +83,18 @@
     <div class="row">
         <div class="small-12 columns">
             <div class="product__onlyvta">
-                <div class="form-line"><input type="radio" name="pokemon" value="Red" id="giahanbaohanh" required><label
-                        for="giahanbaohanh">Gia hạn bảo hành : <span class="color-orange">350,000đ</span></label></div>
-                <div class="form-line"><input type="radio" name="pokemon" value="Red" id="baovetoandien" required><label
-                        for="baovetoandien">Bảo vệ toàn diện : <span class="color-orange">200,000đ</span></label></div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="pokemon" value="Red" >Gia hạn bảo hành : <span class="color-orange">350,000đ</span>
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="pokemon" value="Red" >Bảo vệ toàn diện : <span class="color-orange">200,000đ</span>
+                        </label>
+                    </div>
 
             </div>
         </div>
