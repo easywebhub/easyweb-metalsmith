@@ -3,7 +3,7 @@
 "title": "What's EasywebHub",
 "url": "what-is-easwebhub",
 "description": "A",
-"layout": "blog-post.html",
+"layout": "blog.html",
 "date": "2016-01-21",
 "draft": "false"
 }

@@ -105,7 +105,7 @@ site.metalsmith = {
         '_enable': true,
         'collections.blog':    {
             'perPage':   1,
-            'layout':    'blog.html',
+            'layout':    'blog-list.html',
             'first':     'blog/index.html',
             'path':      'blog/:num/index.html',
             'noPageOne': true,

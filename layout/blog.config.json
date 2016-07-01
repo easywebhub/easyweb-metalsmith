@@ -33,5 +33,19 @@
         "type": "Boolean",
         "validations": [],
         "required": false
+    },
+    {
+        "name": "date",
+        "displayName": "date",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "draft",
+        "displayName": "draft",
+        "type": "Text",
+        "validations": [],
+        "required": false
     }
 ]

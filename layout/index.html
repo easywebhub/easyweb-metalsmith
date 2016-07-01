@@ -4,9 +4,11 @@
     <h1>{{global.title}}</h1>
 
     {{{contents}}}
+    
+    <h3>Danh sách bài viết trong blog</h3>
      <ul>
      {{#each collections.blog}}
-      <li> <a href="/{{path}}" >{{this.title}}</a>  </li>
+      <li> <a href="./{{path}}" >{{this.title}}</a>  </li>
     {{/each}}
     </ul>
   {{/content}}

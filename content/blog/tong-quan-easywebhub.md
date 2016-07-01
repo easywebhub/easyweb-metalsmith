@@ -3,7 +3,7 @@
 "title": "Tổng quan EasyWebHub",
 "url": "easywebhub-overview",
 "description": "Tổng quan EasyWebHub",
-"layout": "blog-post.html",
+"layout": "blog.html",
 "date": "2015-11-03",
 "draft": "false"
 }
