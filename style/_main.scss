@@ -132,8 +132,11 @@ html {
   label{
     display: inline;
   }
-
 }
+.label-inlineBlock{
+  display: inline-block;
+}
+
 
 .flex-equal{
   display: flex;
@@ -193,3 +196,5 @@ html {
 .box-shadow{
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+
