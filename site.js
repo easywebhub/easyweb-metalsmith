@@ -83,7 +83,7 @@ site.style = {
         ]
     },
     autoprefixer: {
-        browsers: ['last 2 versions', '> 1%']
+        browsers: ['last 2 versions', '> 1%', 'iOS 7']
     }
 };
 
