@@ -200,3 +200,17 @@ html {
 .text-uppercase{
   text-transform: uppercase;
 }
+
+
+.adv1{
+  margin-bottom: 10px;
+}
+
+.adv2{
+  margin-bottom: 10px;
+  @extend .clearfix;
+  a{
+    width: 50%;
+    float: left;
+  }
+}
