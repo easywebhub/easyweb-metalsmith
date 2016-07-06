@@ -56,8 +56,8 @@
 
         <div class="productCombo__type">
             <div>Hình thức thanh toán  &nbsp;
-                <input type="radio" name="hinhthucthanhtoan" value="" id="tienmat"><label for="tienmat">Tiền mặt</label>
-                <input type="radio" name="hinhthucthanhtoan" value="" id="tragop"><label for="tragop">Trả góp</label>
+                <label class="radio-inline"><input type="radio" name="hinhthucthanhtoan" > Tiền mặt</label>
+                <label class="radio-inline"><input type="radio" name="hinhthucthanhtoan" > Trả góp</label>
             </div>
         </div>
 
@@ -83,15 +83,23 @@
     <div class="row">
         <div class="small-12 columns">
             <div class="product__onlyvta">
-                <div class="form-line"><input type="radio" name="pokemon" value="Red" id="giahanbaohanh" required><label
-                        for="giahanbaohanh">Gia hạn bảo hành : <span class="color-orange">350,000đ</span></label></div>
-                <div class="form-line"><input type="radio" name="pokemon" value="Red" id="baovetoandien" required><label
-                        for="baovetoandien">Bảo vệ toàn diện : <span class="color-orange">200,000đ</span></label></div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="pokemon" value="Red" >Gia hạn bảo hành : <span class="color-orange">350,000đ</span>
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="pokemon" value="Red" >Bảo vệ toàn diện : <span class="color-orange">200,000đ</span>
+                        </label>
+                    </div>
 
             </div>
         </div>
     </div>
-    <h2 class="product__title">KHUYẾN MÃI</h2>
+    <h2 class="product__title km">KHUYẾN MÃI</h2>
 
     <div class="row">
         <div class="small-12 columns">
@@ -123,7 +131,7 @@
         <div class="small-12 columns">
             <a href="thanhtoan2.html" class="button alert expanded large">MUA ONLINE <span>Giảm thêm 1,200,000đồng</span></a>
             <a href="" class="button-gray button expanded large">ĐẶT GIỮ HÀNG <span>Tại siêu thị</span></a>
-            <a href="" class="button-gray button expanded large">MUA TRẢ GÓP <span>Chỉ từ 1,000,000đồng</span></a>
+            <a href="muatragop-dangky.html" class="button-gray button expanded large">MUA TRẢ GÓP <span>Chỉ từ 1,000,000đồng</span></a>
             <div class="product__button--call"><i class="ti-mobile"></i> Gọi mua nhanh <a href="callto:1900 54 54 46"
                                                                                           class="a-color-red">1900 54 54
                 46</a>
@@ -135,7 +143,7 @@
 
 <div class="des-accordion">
 
-    <ul class="accordion">
+    <ul class="accordion bottom" data-accordion data-multi-expand="true" data-allow-all-closed="true">
         <li class="accordion-item">
             <a href="#" class="accordion-title popover-trigger" data-popover="popover-thongso"><i class="ti-panel"></i>
                 Thông số</a>
@@ -162,11 +170,111 @@
 
         </li>
 
-        <li class="accordion-item ">
-            <a href="#" class="accordion-title"><i class="ti-control-shuffle"></i> So sánh</a>
 
-        </li>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+
+            <li class="accordion-item" data-accordion-item >
+                <a href="#" class="accordion-title"><i class="ti-control-shuffle"></i> So sánh</a>
+
+
+                <div class="accordion-content no-padding" data-tab-content style="border: none">
+
+                    <h4 class="sosanh__title">iPhone SE 16GB Rose Gold với sản phẩm khác</h4>
+
+
+                    <div class="categoryList">
+
+                        <div class="item item-sosanh">
+
+                            <div class="item__image">
+                                <img src="assets/img/product/item-1.jpg" alt="">
+                            </div>
+
+                            <div class="item__name">
+                                iPhone 5S 16GB Gold
+                            </div>
+
+                            <div class="item__price">
+                                <span class="item__price--new">8,790,000đ   </span>
+                            </div>
+
+                            <a href="" class="button primary button-round">So sánh ngay</a>
+
+                        </div>
+                        <div class="item item-sosanh">
+
+                            <div class="item__image">
+                                <img src="assets/img/product/item-1.jpg" alt="">
+                            </div>
+
+                            <div class="item__name">
+                                Samsung Galaxy J7 (SM-J710F)
+                            </div>
+
+                            <div class="item__price">
+                                <span class="item__price--new">28,790,000đ   </span>
+                            </div>
+
+                            <a href="" class="button primary button-round">So sánh ngay</a>
+
+                        </div>
+                        <div class="item item-sosanh">
+
+                            <div class="item__image">
+                                <img src="assets/img/product/item-1.jpg" alt="">
+                            </div>
+
+                            <div class="item__name">
+                                Sony Xperia Z5 Premium Dual
+                            </div>
+
+                            <div class="item__price">
+                                <span class="item__price--new">8,790,000đ   </span>
+                            </div>
+
+                            <a href="" class="button primary button-round">So sánh ngay</a>
+
+                        </div>
+
+                        <div class="item item-sosanh item-sosanh-input">
+
+
+                            <div class="icon">+</div>
+
+                            <div class="formSearch">
+
+                                <input type="text" placeholder="Nhập tên điện thoại">
+
+                                <ul class="formSearch__list box-shadow">
+                                    <li><a href="">Xiaomi Mi 4 Roger Federer</a></li>
+                                    <li><a href="">Xiaomi Mi Note 3</a></li>
+                                    <li><a href="">Xiaomi Mi 5</a></li>
+                                    <li><a href="">Mi band 2</a></li>
+                                </ul>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </li>
+
+        </ul>
+
+
+
+
+
     </ul>
+
+
 
 </div>
 

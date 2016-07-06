@@ -37,13 +37,21 @@
             </h4>
 
             <p class="text-gray">Giấy tờ bạn phải có : </p>
-            <div class="form-line label-inline">
-                <input type="radio" name="giayTo" value="" id="giayTo1"><label for="giayTo1">CMND + Hộ khẩu hoặc Bằng lái (Duyệt nhanh, lãi suất cao)</label>
+      
+            <div class="radio">
+                <label>
+                    <input type="radio" name="giayTo" value=""> CMND + Hộ khẩu hoặc Bằng lái (Duyệt nhanh, lãi suất cao)
+                </label>
             </div>
 
-            <div class="form-line label-inline">
-                <input type="radio" name="giayTo" value="" id="giayTo2"><label for="giayTo2">CMND + Hộ khẩu + Hóa đơn điện nước (Lãi suất thấp)</label>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="giayTo" value=""> CMND + Hộ khẩu + Hóa đơn điện nước (Lãi suất thấp)
+                </label>
             </div>
+
+
 
             <p class="text-gray">Lưu ý: - Số tiền dưới đây chỉ mang tính tham khảo <br> - Bạn sẽ được tư vấn thêm sau khi đặt hàng thành công.</p>
         </div>
@@ -65,15 +73,24 @@
     </h3>
 
     <div class="gutter">
-        <div class="form-line more label-inline">
-            <input type="radio" name="donVi" value="" id="donVi1"><label for="donVi1"><img src="https://vienthonga.vn/Content/images/tragop/home-credit-logo.jpg" alt="" width="100"></label>
+        <div class="radio form-line">
+            <label>
+                <input type="radio" name="donVi" value=""><img src="https://vienthonga.vn/Content/images/tragop/home-credit-logo.jpg" alt="" width="100">
+            </label>
         </div>
-        <div class="form-line more label-inline">
-            <input type="radio" name="donVi" value="" id="donVi2"><label for="donVi2"><img src="https://vienthonga.vn/Content/images/tragop/hdf-logo.png" alt="" width="100"></label>
+
+        <div class="radio form-line">
+            <label>
+                <input type="radio" name="donVi" value=""><img src="https://vienthonga.vn/Content/images/tragop/hdf-logo.png" alt="" width="100">
+            </label>
         </div>
-        <div class="form-line more label-inline">
-            <input type="radio" name="donVi" value="" id="donVi3"><label for="donVi3"><img src="https://vienthonga.vn/Content/images/tragop/acs-logo.jpg" alt="" width="100"></label>
+
+        <div class="radio form-line">
+            <label>
+                <input type="radio" name="donVi" value=""><img src="https://vienthonga.vn/Content/images/tragop/acs-logo.jpg" alt="" width="100">
+            </label>
         </div>
+
     </div>
 
     <div class=" form-border bottom-grey">
@@ -155,8 +172,17 @@
     <div class="formDathang__content">
 
         <div class="form-line">
-            <input type="radio" name="sex" value="" checked="" id="male"><label for="male">Anh</label>
-            <input type="radio" name="sex" value="" id="female"><label for="female">Chị</label>
+
+
+            <label class="radio-inline">
+                <input type="radio" value="" checked="" name="chooseSex">Anh
+            </label>
+
+            <label class="radio-inline">
+                <input type="radio" value="" name="chooseSex">Chị
+            </label>
+
+
         </div>
 
         <div class="form-line row align-middle">

@@ -27,20 +27,20 @@
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
     display: block;
-    height: 33px;
+    height: 35px;
     width: 42px;
     text-align: center;
     font-size: 18px;
-    line-height: 33px;
+    line-height: 38px;
     border-left: 1px solid $medium-gray;
 
-    @include breakpoint(321px up){
-      height: 37px;
-      width: 50px;
-      text-align: center;
-      font-size: 18px;
-      line-height: 38px;
-    }
+    // @include breakpoint(321px up){
+    //   height: 37px;
+    //   width: 50px;
+    //   text-align: center;
+    //   font-size: 18px;
+    //   line-height: 38px;
+    // }
   }
 }
 

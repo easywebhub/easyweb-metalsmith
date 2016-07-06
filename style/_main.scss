@@ -12,9 +12,7 @@ body{
 }
 
 html {
-  @include breakpoint(320px down) {
-    font-size: 90%;
-  }
+ 
 }
 .gutter{
   padding: 0 10px;
@@ -85,7 +83,7 @@ html {
 }
 
 .button-gray{
-  @include button(false, darken($color-border1,10%), darken($color-border1, 20%), $secondary-color, "solid");
+  @include button(false, darken($color-border1,0%), darken($color-border1, 10%), $secondary-color, "solid");
 }
 
 .a-absolute{
@@ -134,8 +132,11 @@ html {
   label{
     display: inline;
   }
-
 }
+.label-inlineBlock{
+  display: inline-block;
+}
+
 
 .flex-equal{
   display: flex;
@@ -174,6 +175,7 @@ html {
     left: 50%;
     height: 100%;
     width: 1px;
+    top: 0;
   }
 }
 
@@ -185,3 +187,30 @@ html {
   padding: 0 !important;
 }
 
+.button-round{
+  border-radius: 30px;
+  padding: 0.6em 0.9em;
+  font-size: 16px;
+}
+
+.box-shadow{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+
+.adv1{
+  margin-bottom: 10px;
+}
+
+.adv2{
+  margin-bottom: 10px;
+  @extend .clearfix;
+  a{
+    width: 50%;
+    float: left;
+  }
+}

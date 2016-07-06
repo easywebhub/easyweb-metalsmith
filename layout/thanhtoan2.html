@@ -4,244 +4,273 @@
 {{#content "body"}}
 
 <h3 class="moveStep__title">
-  <span>Thanh toán hóa đơn</span>
+    <span>Thanh toán hóa đơn</span>
 
 </h3>
 
 
-<div class="product__info">
-  <div class="row align-middle">
-    <div class="small-4 columns">
-      <div class="product__image">
-        <img src="assets/img/product/product1.jpg">
-      </div>
-    </div>
-    <div class="small-8 columns">
-      <h3 class="product__name">Iphone 6s 16Gb (IP-J710F)</h3>
-      <div class="product__price">
-        <span class="product__price--new">13,890,000đ</span>
-      </div>
-      <div class="product__km">
-        <input type="checkbox" id="load_more" role="button">
 
-        <div class="product__sale">
-          <p>
-            - Thêm 99.000đ sở hữu <strong><a href="https://vienthonga.vn/the-cao-sim-so#simdatakhung">Sim Data
-            Khủng</a></strong> trị giá 20.000.000đ: <br>&nbsp;&nbsp;+ Sim Vinaphone trả trước 10 số<br>&nbsp;&nbsp;+
-            Khuyến mãi 3GB đến 6GB data 3G mỗi tháng x 12 tháng<br>&nbsp;&nbsp;+ Khuyến mãi (300 phút gọi không
-            giới hạn trên 1 cuộc gọi + 150 tin nhắn) mỗi tháng x 12 tháng
+<div class="product__info">
+    <div class="row align-middle">
+        <div class="small-4 columns">
+            <div class="product__image">
+                <img src="assets/img/product/product1.jpg">
+            </div>
+        </div>
+        <div class="small-8 columns">
+            <h3 class="product__name">Iphone 6s 16Gb (IP-J710F)</h3>
+            <div class="product__price">
+                <span class="product__price--new">13,890,000đ</span>
+            </div>
+            <div class="product__km">
+                <input type="checkbox" id="load_more" role="button">
+
+                <div class="product__sale">
+                    <p>
+                        - Thêm 99.000đ sở hữu <strong><a href="https://vienthonga.vn/the-cao-sim-so#simdatakhung">Sim
+                        Data
+                        Khủng</a></strong> trị giá 20.000.000đ: <br>&nbsp;&nbsp;+ Sim Vinaphone trả trước 10 số<br>&nbsp;&nbsp;+
+                        Khuyến mãi 3GB đến 6GB data 3G mỗi tháng x 12 tháng<br>&nbsp;&nbsp;+ Khuyến mãi (300 phút gọi
+                        không
+                        giới hạn trên 1 cuộc gọi + 150 tin nhắn) mỗi tháng x 12 tháng
+
+                </div>
+
+                <label for="load_more" onclick=""><span>Xem khuyến mãi <i
+                        class="ti-angle-down"></i></span><span>Ẩn khuyến mãi <i class="ti-angle-up"></i></span></label>
+            </div>
+
 
         </div>
-
-        <label for="load_more" onclick=""><span>Xem khuyến mãi <i
-            class="ti-angle-down"></i></span><span>Ẩn khuyến mãi <i class="ti-angle-up"></i></span></label>
-      </div>
-
-
     </div>
-  </div>
 
 </div>
 
 
 <div class="formDathang">
-  <form data-abide novalidate id="formDathang1">
+    <form data-abide novalidate id="formDathang1">
 
 
-    <div class="formDathang__title">
-      <span class="number-list">1</span> Chọn màu
-    </div>
+        <div class="formDathang__title">
+            <span class="number-list">1</span> Chọn màu
+        </div>
 
-    <div class="formDathang__content">
-      <div class="product__color align-middle">
-        <input type="radio" name="chooseColor" value="" id="color1"><label for="color1"><span class="color choose"
-                                                                                              style="background-color: #4a4a4a;"></span></label>
-        <input type="radio" name="chooseColor" value="" id="color2"><label for="color2"><span class="color"
-                                                                                              style="background-color: #d9d689;"></span></label>
-        <input type="radio" name="chooseColor" value="" id="color3"><label for="color3"><span class="color"
-                                                                                              style="background-color: #df907f;"></span></label>
-      </div>
-    </div>
+        <div class="formDathang__content">
+            <div class="product__color align-middle">
+                    <label class="radio-inline">
+                        <input type="radio" name="chooseColor" value="" checked="checked"> <span class="color choose" style="background-color: #4a4a4a;"></span>
+                    </label>
 
-    <div class="formDathang__title">
-      <span class="number-list">2</span> Thông tin người mua
-    </div>
+                    <label class="radio-inline">
+                        <input type="radio" name="chooseColor"  value="" checked="checked"> <span class="color choose" style="background-color: #d9d689;"></span>
+                    </label>
 
-    <div class="formDathang__content">
-      <div class="form-line">
-        <input type="radio" name="sex" value="" checked id="male"><label for="male">Anh</label>
-        <input type="radio" name="sex" value="" id="female"><label for="female">Chị</label>
-      </div>
+                    <label class="radio-inline">
+                        <input type="radio" name="chooseColor"  value="" checked="checked"> <span class="color choose" style="background-color: #df907f;"></span>
+                    </label>
 
+            </div>
+        </div>
 
-      <label>
-        <input type="text" placeholder="Họ và tên bạn ( bắt buộc )" required pattern="text">
-        <span class="form-error">Bạn cần nhập họ tên.</span>
-      </label>
+        <div class="formDathang__title">
+            <span class="number-list">2</span> Thông tin người mua
+        </div>
 
-      <label>
-        <input type="text" placeholder="Số di động ( bắt buộc )" required pattern="number">
-        <span class="form-error">Bạn cần nhập số điện thoại.</span>
-      </label>
+        <div class="formDathang__content">
+            <div class="form-line">
 
-      <label>
-        <input type="email" placeholder="Email" required pattern="email">
-        <span class="form-error">Bạn cần nhập email.</span>
-      </label>
+                <label class="radio-inline">
+                    <input type="radio" name="sex" value="" checked >Anh
+                </label>
 
-    </div>
+                <label class="radio-inline">
+                    <input type="radio" name="sex" value="" >Chị
+                </label>
+
+            </div>
 
 
-    <div class="formDathang__title">
-      <span class="number-list">3</span> Chọn hình thức nhận hàng &nbsp;
-    </div>
+            <label>
+                <input type="text" placeholder="Họ và tên bạn ( bắt buộc )" required pattern="text">
+                <span class="form-error">Bạn cần nhập họ tên.</span>
+            </label>
 
-    <div class="formDathang__content">
+            <label>
+                <input type="text" placeholder="Số di động ( bắt buộc )" required pattern="number">
+                <span class="form-error">Bạn cần nhập số điện thoại.</span>
+            </label>
 
-      <div class="form-line">
-        <input type="radio" name="RecieveType" value="" data-chosen="giaohangtannoi" id="ghtn"><label for="ghtn">Giao hàng
-        tận nơi</label>
-        <input type="radio" name="RecieveType" value="" data-chosen="nhanhangsieuthi" id="nhtst"><label for="nhtst">Nhận
-        hàng
-        tại siêu thị</label>
-      </div>
-
-      <div class="hideBlock" id="giaohangtannoi">
-        <select class="">
-          <option value="">Chọn thành phố</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
-
-        <select class="">
-          <option value="">Chọn quận huyện</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
-
-        <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
-      </div>
-
-      <div class="hideBlock" id="nhanhangsieuthi">
-        <select class="">
-          <option value="">Chọn quận huyện</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
-
-        <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
-      </div>
-
-
-    </div>
-
-    <div class="formDathang__title">
-      <span class="number-list">4</span> Nhập Vcoupon hay mã khuyến mãi
-    </div>
-
-    <div class="formDathang__content">
-
-      <div class="form-inline-button flex-equal">
-        <input type="text" placeholder="Nhập Vcoupon hay mã khuyến mãi để được giảm giá">
-
-        <a href="#features" class="button alert">Sử dụng</a>
-      </div>
-
-    </div>
-
-    <div class="formDathang__title">
-      <span class="number-list">5</span> Hình thức thanh toán
-    </div>
-
-    <div class="formDathang__content">
-      <div class="form-line">
-        <input type="radio" name="PaymentType" value="" id="paymentType1"><label
-          for="paymentType1">Thanh toán khi nhận hàng</label>
-        <input type="radio" name="PaymentType" value="" id="paymentType2"><label
-          for="paymentType2">Chuyển khoản</label>
-      </div>
-
-      <div class="form-line">
-        <input type="radio" name="PaymentType" value="" data-chosen="masterCard" id="paymentType3"><label
-          for="paymentType3">Thanh toán trực tuyến</label>
-
-          <div id="masterCard">
-            <input type="radio" name="PaymentMethod" value="" data-chosen="masterCard-uudai" id="masterCard1"><label
-              for="masterCard1"><img
-              src="https://vienthonga.vn/Content/images/popup/visa.png" alt=""></label>
-
-            <input type="radio" name="PaymentMethod" value=""  id="masterCard2"><label
-              for="masterCard2"><img
-              src="https://vienthonga.vn/Content/images/popup/mastercard.png" alt=""></label>
-
-            <input type="radio" name="PaymentMethod" value=""  id="masterCard3"><label
-              for="masterCard3"><img
-              src="https://vienthonga.vn/Content/images/popup/atm.png" alt=""></label>
-
-
-              <div id="masterCard-uudai" class="hideBlock">
-                <div class="border">
-                  <h4><i class="vta-check"></i> Ưu đãi khi thanh toán bằng VISA</h4>
-                  <div><span>. Giảm ngay 5%</span> trên giá trị đơn hàng.</div>
-                  <div><span>. Đặc biệt giảm đến 10%</span> vào ngày thứ 6 hàng tuần.</div>
-                  <div>(Mức giảm tối đa 1,000,000đ)</div>
-                </div>
-              </div>
-
-
-          </div>
-
-
-      </div>
-
-
-      <div class="form-line">
-        <input type="checkbox" value="" data-chosen="f-xuathoadon" name="xuathoadon" id="xhd"><label for="xhd">Xuất hóa đơn công
-        ty</label>
-      </div>
-        <div id="f-xuathoadon" class="hideBlock">
-          <label>
-            <input type="text" placeholder="Tên công ty">
-          </label>
-
-          <label>
-            <input type="text" placeholder="Địa chỉ">
-          </label>
-
-          <label>
-            <input type="text" placeholder="Mã số thuế">
-          </label>
+            <label>
+                <input type="email" placeholder="Email" required pattern="email">
+                <span class="form-error">Bạn cần nhập email.</span>
+            </label>
 
         </div>
 
-    </div>
 
-    <div class="formDathang__result">
-      <ul class="">
-        <li>Đơn giá:                                                    <span class="float-right">12,500,000đ</span> </li>
-        <li>Giá trừ PMH:                                             <span class="float-right">12,500,000đ</span></li>
-        <li>Giá trừ Vcoupon:                                      <span class="float-right">12,500,000đ</span></li>
-        <li>Phí vận chuyển:                                               <span class="float-right">30,000đ</span></li>
-        <li><i>( Áp dụng cho đơn hàng dưới 400,000đ )</i></li>
+        <div class="formDathang__title">
+            <span class="number-list">3</span> Chọn hình thức nhận hàng &nbsp;
+        </div>
 
-        <li class="total">Tổng số tiền thanh toán:                                                <span class="float-right">13,000,000đ</span></li>
-      </ul>
+        <div class="formDathang__content">
 
 
-
-    </div>
-
-
-    <div class="gutter">
-      <button class="button warning large expanded" type="submit" value="Submit">ĐẶT MUA</i>
-      </button>
-    </div>
+            <div class="form-line">
 
 
-  </form>
+                <label class="radio-inline">
+                    <input type="radio" value="" checked name="RecieveType" data-chosen="giaohangtannoi"> Giao hàng   tận nơi
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="RecieveType" value="" data-chosen="nhanhangsieuthi"> Nhận hàng tại siêu thị
+                </label>
+
+            </div>
+
+            <div class="" id="giaohangtannoi">
+                <select class="">
+                    <option value="">Chọn thành phố</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+
+                <select class="">
+                    <option value="">Chọn quận huyện</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+
+                <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
+            </div>
+
+            <div class="hideBlock" id="nhanhangsieuthi">
+                <select class="">
+                    <option value="">Chọn quận huyện</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+
+                <input type="text" placeholder="Nhập số nhà tên đường để nhận hàng ( bắt buộc )">
+            </div>
+
+
+        </div>
+
+        <div class="formDathang__title">
+            <span class="number-list">4</span> Nhập Vcoupon hay mã khuyến mãi
+        </div>
+
+        <div class="formDathang__content">
+
+            <div class="form-inline-button flex-equal">
+                <input type="text" placeholder="Nhập Vcoupon hay mã khuyến mãi để được giảm giá">
+
+                <a href="#features" class="button alert">Sử dụng</a>
+            </div>
+
+        </div>
+
+        <div class="formDathang__title">
+            <span class="number-list">5</span> Hình thức thanh toán
+        </div>
+
+        <div class="formDathang__content">
+            <div class="form-line">
+
+                <label class="radio-inline">
+                    <input type="radio" name="PaymentType" value=""> Thanh toán khi nhận hàng
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="PaymentType" value=""> Chuyển khoản
+                </label>
+
+            </div>
+
+            <div class="form-line">
+                <div class="radio">
+                    <label >
+                        <input type="radio" name="PaymentType" value="" data-chosen="masterCard" id=""> Thanh toán trực tuyến
+                    </label>
+                </div>
+
+                <div id="masterCard">
+
+                    <label class="radio-inline">
+                        <input type="radio" name="PaymentMethod" data-chosen="masterCard-uudai"> <img src="https://vienthonga.vn/Content/images/popup/visa.png" alt="">
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="PaymentMethod"> <img src="https://vienthonga.vn/Content/images/popup/mastercard.png" alt="">
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="PaymentMethod"> <img src="https://vienthonga.vn/Content/images/popup/atm.png" alt="">
+                    </label>
+
+                    <div id="masterCard-uudai" class="hideBlock">
+                        <div class="border">
+                            <h4><i class="vta-check"></i> Ưu đãi khi thanh toán bằng VISA</h4>
+                            <div><span>. Giảm ngay 5%</span> trên giá trị đơn hàng.</div>
+                            <div><span>. Đặc biệt giảm đến 10%</span> vào ngày thứ 6 hàng tuần.</div>
+                            <div>(Mức giảm tối đa 1,000,000đ)</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-line">
+
+                <div class="checkbox">
+                    <label >
+                        <input type="checkbox" value="" data-chosen="f-xuathoadon" name="xuathoadon"> Xuất                         hóa đơn công                         ty
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div id="f-xuathoadon" class="hideBlock">
+                    <input type="text" placeholder="Tên công ty">
+
+                    <input type="text" placeholder="Địa chỉ">
+                    <input type="text" placeholder="Mã số thuế">
+
+            </div>
+
+        </div>
+
+        <div class="formDathang__result">
+            <ul class="">
+                <li>Đơn giá: <span class="float-right">12,500,000đ</span></li>
+                <li>Giá trừ PMH: <span class="float-right">12,500,000đ</span></li>
+                <li>Giá trừ Vcoupon: <span class="float-right">12,500,000đ</span></li>
+                <li>Phí vận chuyển: <span class="float-right">30,000đ</span></li>
+                <li><i>( Áp dụng cho đơn hàng dưới 400,000đ )</i></li>
+
+                <li class="total">Tổng số tiền thanh toán: <span class="float-right">13,000,000đ</span></li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="gutter">
+            <button class="button warning large expanded" type="submit" value="Submit">ĐẶT MUA</i>
+            </button>
+        </div>
+
+
+    </form>
 
 
 </div>
