@@ -50,15 +50,25 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2e3191,
-  secondary: #222222,
+  secondary: #757575,
   success: #3adb76,
   warning: #ff6c00                                                                                                                                                                                                                                                                                                                                          ,
   alert: #ed1c24,
 );
+
+
+$primary-color: map-get($foundation-palette , primary );
+$secondary-color: map-get($foundation-palette , secondary );
+$success-color: map-get($foundation-palette , success );
+$warning-color: map-get($foundation-palette , warning );
+$alert-color: map-get($foundation-palette , alert );
+
+
+
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #323232;
-$black: #0a0a0a;
+$dark-gray: #707070;
+$black: #212121;
 $white: #fefefe;
 
 
@@ -67,7 +77,8 @@ $color-blue: #2e3191;
 $color-blue-light: #35aaf4;
 $color-red: #ed1c24;
 $color-orange: #ff6c00;
-$color-gray: #707070;
+
+
 $color-yellow: #ffff00;
 
 $color-border1: #f2f2f2;

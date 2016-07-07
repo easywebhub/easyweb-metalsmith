@@ -41,7 +41,7 @@ body {
   border-right: 1px solid $color-border1;
   li{
     a{
-      color: $secondary-color;
+      color: $black;
       @include header-size(h3);
       display: block;
       padding: 0 10px;

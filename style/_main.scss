@@ -52,6 +52,13 @@ html {
   }
 }
 
+.link-gray{
+  color: $black;
+  &:hover{
+    color: $primary-color;
+  }
+}
+
 .color-orange{
   color: $color-orange;
 }
@@ -83,7 +90,7 @@ html {
 }
 
 .button-gray{
-  @include button(false, darken($color-border1,0%), darken($color-border1, 10%), $secondary-color, "solid");
+  @include button(false, darken($color-border1,0%), darken($color-border1, 10%), $black, "solid");
 }
 
 .a-absolute{
@@ -96,7 +103,7 @@ html {
 }
 
 .text-gray{
-  color: $color-gray;
+  color: $dark-gray;
 }
 
 .clearlist{
@@ -121,7 +128,7 @@ html {
   overflow: hidden;
 
   a{
-    color: $secondary-color;
+    color: $black;
   }
   &.transparent{
     background: transparent;
@@ -157,7 +164,7 @@ html {
   color: $secondary-color;
 }
 .color-gray{
-  color: $color-gray;
+  color: $dark-gray;
 }
 
 .section-space{

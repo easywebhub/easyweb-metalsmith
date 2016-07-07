@@ -74,7 +74,7 @@
 .item__list{
   margin: 0;
   list-style: none;
-  color: $color-gray;
+  color: $dark-gray;
   span{
     color: $color-orange;
   }
@@ -111,7 +111,7 @@
 }
 .product__price--old{
   @include header-size(h3);
-  color: $color-gray;
+  color: $dark-gray;
 
   text-decoration: line-through;
 }
@@ -197,6 +197,14 @@
       margin-top: 5px;
       display: block;
       font-size: 85%;
+
+    }
+
+    &.button-gray{
+      span{
+        color: $dark-gray;
+      }
+
     }
   }
 }
@@ -221,7 +229,7 @@
   .accordion-title{
     @include header-size(h5);
     text-transform: uppercase;
-    color: $secondary-color;
+    color: $black;
 
     i{
       min-width: 25px;
@@ -278,7 +286,7 @@
         .accordion-title{
 
           background: $light-gray   ;
-          color: $secondary-color;
+          color: $black;
         }
       }
       .accordion-title{
@@ -351,7 +359,7 @@
   background: #f9f9f9;
   ul{
     li{
-      color: $color-gray;
+      color: $dark-gray;
     }
   }
 }
@@ -388,6 +396,10 @@
 
   }
 
+  .item-sosanh{
+    flex: 0 0 50%;
+  }
+
 
 }
 
@@ -411,7 +423,7 @@
   height: 88px;
   overflow: hidden;
   font-size: 90%;
-  color: $color-gray;
+  color: $dark-gray;
   position: relative;
   &:after{
     left: 0;
@@ -458,7 +470,7 @@
     display: block;
     padding: 10px 10px;
     width: 100%;
-    color: $secondary-color;
+    color: $black;
     &.active{
       background: $color-border1;
     }

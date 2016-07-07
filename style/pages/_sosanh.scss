@@ -51,7 +51,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: $color-gray;
+      color: $dark-gray;
     }
 
     &:last-child{
@@ -100,7 +100,7 @@
   margin-bottom: 10px;
   padding-bottom: 10px;
   @include header-size(h6);
-  color: $color-gray;
+  color: $dark-gray;
   font-size: rem-calc(14px);
   >div{
     padding: 0 10px;
@@ -112,7 +112,7 @@
     display: block;
     padding: 10px 0;
     font-size: rem-calc(14px);
-    color: $color-gray;
+    color: $dark-gray;
 
     &:hover{
       color: $primary-color;
