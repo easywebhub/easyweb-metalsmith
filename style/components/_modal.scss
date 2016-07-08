@@ -53,9 +53,9 @@
   border-bottom: .1rem solid rgba(0,0,0,.2);
   padding: 11px 10px;
   z-index: 9999;
-  color: $secondary-color;
+  color: $black;
   &:hover, &:active{
-    color: $secondary-color;
+    color: $black;
   }
   .back{
     font-weight: bold;

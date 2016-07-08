@@ -6,6 +6,9 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   background: $white;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .item-horizontal{
@@ -191,7 +194,7 @@
   padding: 10px 0;
   background: #fff;
   .button{
-    padding: 0.2em 1em 0.3em;
+    padding: 0.3em 1em 0.3em;
     margin-bottom:10px;
     span{
       margin-top: 5px;
@@ -457,7 +460,7 @@
   list-style: none;
   text-align: center;
   border-top: 1px solid $light-gray;
-  //border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
   background: $white;
   >li{
     cursor: pointer;
