@@ -155,9 +155,20 @@ function asset() {
 
 // tạo local server host nội dung của ${site.buildRoot}
 function server(done) {
+	console.trace('init browserSync');
     browser.init({
         server: site.buildRoot,
         port:   site.port
+    });
+    done();
+}
+
+function serverForApp(done) {
+    console.trace('init browserSync');
+    browser.init({
+        server: site.buildRoot,
+        ui:     false,
+        open:   false
     });
     done();
 }
@@ -186,3 +197,4 @@ function watch() {
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', gulp.series('build', server, watch));
+gulp.task('app-watch', gulp.series('build', serverForApp, watch));
