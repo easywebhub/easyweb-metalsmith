@@ -3,11 +3,23 @@
 const PROD = !!(require('yargs').argv.production);
 let site = require('./site');
 const gulp = require('gulp');
-const $ = require('gulp-load-plugins')({camelize: true});
 const browser = require('browser-sync');
 const Metalsmith = require('metalsmith');
 const Handlebars = require('handlebars');
 require('./handlebars-helper')(Handlebars);
+
+// load metalsmith plugin
+const $ = {
+    plumber:      require('gulp-plumber'),
+    sourcemaps:   require('gulp-sourcemaps'),
+    sass:         require('gulp-sass'),
+    uglify:       require('gulp-uglify'),
+    cssnano:      require('gulp-cssnano'),
+    autoprefixer: require('gulp-autoprefixer'),
+    inlineSource: require('gulp-inline-source'),
+    babel:        require('gulp-babel'),
+    concat:       require('gulp-concat')
+};
 
 const MetalSmithProductionPlugins = [
     'metalsmith-html-minifier'
@@ -155,7 +167,7 @@ function asset() {
 
 // tạo local server host nội dung của ${site.buildRoot}
 function server(done) {
-	console.trace('init browserSync');
+    console.trace('init browserSync');
     browser.init({
         server: site.buildRoot,
         port:   site.port
