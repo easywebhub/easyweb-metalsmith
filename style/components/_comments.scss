@@ -1,6 +1,7 @@
 .comments{
-  padding: 0 10px 0;
+  padding: 0 10px 10px;
   background: $white;
+  margin-bottom: 10px;
 }
 .comments-sort{
   padding: 0 10px 0;
@@ -107,7 +108,11 @@
 
 .comment-loadmore{
   padding: 5px 10px;
-  background: $light-gray;
+  background:transparent;
+  a{
+    color: $secondary-color;
+    font-size: rem-calc(13px);
+  }
 }
 
 
