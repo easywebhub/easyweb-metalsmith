@@ -19,8 +19,7 @@
   border-bottom: 0;
 
   .item{
-    max-width: 180px;
-
+    width: 180px;
   }
 }
 
@@ -44,8 +43,16 @@
 
 .item__image{
   text-align: center;
+  padding: 0 10px;
   margin-bottom: 15px;
+
+  .embed-responsive-item{
+    background: $light-gray;
+
+  }
 }
+
+
 .item__name{
   min-height: 36px;
   line-height: 1.2rem;
@@ -412,14 +419,16 @@
   display: flex;
   align-items: center;
   .item__image{
-    flex: 0 0 120px;
+    flex: 0 0 50%;
   }
   .item__name{
     min-height: inherit;
+     
   }
 }
 .item__feature-info{
   padding: 0 10px;
+  flex: 0 0 50%;
 }
 
 .item__text--sale{

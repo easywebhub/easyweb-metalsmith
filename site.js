@@ -63,6 +63,7 @@ site.script = {
         "bower_components/slideout.js/dist/slideout.min.js",
         "bower_components/Swiper/dist/js/swiper.min.js",
         "bower_components/jquery.countdown/dist/jquery.countdown.min.js",
+        "bower_components/lazysizes/lazysizes.min.js",
 
         // thêm các file script của site ở đây
         // muốn concat đúng thứ tự thì phải define path
