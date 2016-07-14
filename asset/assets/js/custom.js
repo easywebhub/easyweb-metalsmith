@@ -332,3 +332,73 @@ $(function () {
 
 
 // end Mua tra gop
+
+
+
+//For horinav
+
+// var horiNav = {
+//     container: $(".horinav"),
+//     list: $(".horinav__list"),
+
+//     config: {
+
+//     },
+//     init : function(){
+
+//     },
+
+
+// };
+
+//  $('.nav-menu ul').scrollLeft($('.nav-menu ul li.active').offset().left / 2)
+
+// var contactForm = {
+        
+//         container:  $('#contact'),
+        
+//         config: {
+//             effect : 'slideToggle',
+//             speed: 500
+//         },
+        
+//         init: function(config){
+            
+//             $.extend(this.config, config);
+            
+//             $('<button></button>', {
+//                 text: 'Contact me'
+//             })
+//             .insertAfter('article:first')
+//             .on('click', this.show)
+//         },
+        
+//         show: function(){
+            
+//             var cf = contactForm,
+//                 container = cf.container,
+//                 config = cf.config;
+            
+//             if(container.is(':hidden')){
+//                 contactForm.close.call(container);
+//                 container[config.effect](config.speed);
+//             }
+//         },
+        
+//         close: function(){
+//             var $this = $(this);
+            
+//             if($this.find('span.close').length) return;
+            
+//             $('<span class="close">X</span>')
+//             .prependTo(this)
+//             .on('click', function(){
+//                 $this[contactForm.config.effect](contactForm.config.speed);
+//             })
+//         }
+        
+        
+//     };
+    
+
+    

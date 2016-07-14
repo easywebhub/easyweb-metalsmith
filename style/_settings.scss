@@ -52,7 +52,7 @@ $foundation-palette: (
   primary: #2e3191,
   secondary: #757575,
   success: #3adb76,
-  warning: #ff6c00                                                                                                                                                                                                                                                                                                                                          ,
+  warning: #ff6c00,
   alert: #ed1c24,
 );
 
@@ -128,7 +128,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Roboto Condensed', sans-serif;
+$header-font-family: inherit;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
