@@ -2,7 +2,7 @@ function SearchToTop() {
     var top = document.getElementById("searchNav").offsetTop;
     window.scrollTo(0, top);
 }
-function tragopToTop(){
+function tragopToTop() {
     var top = document.getElementById("tragop-progress").offsetTop;
     window.scrollTo(0, top - 10);
 }
@@ -47,19 +47,19 @@ function tragopToTop(){
             }
         }
     }
-// Search
+    // Search
     $('[data-products-search]')
-        .typeahead({highlight: false}, source)
+        .typeahead({ highlight: false }, source)
         .on('typeahead:select', function (e, sel) {
             window.location.href = sel.link;
         });
 
-// Auto-highlight unless it's a phone
+    // Auto-highlight unless it's a phone
     if (!navigator.userAgent.match(/(iP(hone|ad|od)|Android)/)) {
         $('[data-docs-search]').focus();
     }
 
-}();
+} ();
 
 
 if ($(".swiper-container").length != 0) {
@@ -103,7 +103,7 @@ var slideout = new Slideout({
 });
 
 if (document.querySelector('.toggle-button') !== null) {
-// Toggle button
+    // Toggle button
     document.querySelector('.toggle-button').addEventListener('click', function (event) {
         event.preventDefault()
         slideout.toggle();
@@ -337,68 +337,48 @@ $(function () {
 
 //For horinav
 
-// var horiNav = {
-//     container: $(".horinav"),
-//     list: $(".horinav__list"),
 
-//     config: {
+function horiNav(type) {
+    var hori = $(".horinav__list");
+    var horiActive = hori.find(".active").eq(0);
 
-//     },
-//     init : function(){
+    // defind width
+    var wContainer = $(".horinav").width(); //ob
+    var wActive = horiActive.width(); //a1a2
+    var wLeftActive = horiActive.offset().left; //a0a1
+    var wRightActive = wLeftActive + wActive; //a0a2
+    var wMargin = hori.offset().left;
+    var x;
 
-//     },
+    switch (type) { 
+        case 'center': 
+            if(wRightActive <= (wContainer + wActive)/2){
+                hori.addClass("visible");
+                console.log("Ko lam j them");
+                break;
+            }
+            x = wLeftActive - (wContainer - wActive)/2 - wMargin;;
+            hori.addClass("visible").scrollLeft(x);
+            break;
+        case 'left': 
+            x = wLeftActive - wMargin;
+            hori.addClass("visible").scrollLeft(x);
+            break;
+        case 'right': 
+            if(wRightActive <= wContainer){
+                hori.addClass("visible");
+                console.log("Ko lam j them");
+                break;		
+            }
+            x = wLeftActive - (wContainer - wActive);
+             hori.addClass("visible").scrollLeft(x);
+            break;
+        default:
+            alert('Nobody Wins!');
+    }
+
+}
+
+horiNav("center");
 
 
-// };
-
-//  $('.nav-menu ul').scrollLeft($('.nav-menu ul li.active').offset().left / 2)
-
-// var contactForm = {
-        
-//         container:  $('#contact'),
-        
-//         config: {
-//             effect : 'slideToggle',
-//             speed: 500
-//         },
-        
-//         init: function(config){
-            
-//             $.extend(this.config, config);
-            
-//             $('<button></button>', {
-//                 text: 'Contact me'
-//             })
-//             .insertAfter('article:first')
-//             .on('click', this.show)
-//         },
-        
-//         show: function(){
-            
-//             var cf = contactForm,
-//                 container = cf.container,
-//                 config = cf.config;
-            
-//             if(container.is(':hidden')){
-//                 contactForm.close.call(container);
-//                 container[config.effect](config.speed);
-//             }
-//         },
-        
-//         close: function(){
-//             var $this = $(this);
-            
-//             if($this.find('span.close').length) return;
-            
-//             $('<span class="close">X</span>')
-//             .prependTo(this)
-//             .on('click', function(){
-//                 $this[contactForm.config.effect](contactForm.config.speed);
-//             })
-//         }
-        
-        
-//     };
-    
-
-    

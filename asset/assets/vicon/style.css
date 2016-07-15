@@ -9,7 +9,7 @@
     font-style: normal;
 }
 
-[class^="v"], [class*=" v"] {
+[class^="vicon"], [class*=" vicon"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'vicon' !important;
     speak: none;
