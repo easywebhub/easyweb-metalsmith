@@ -338,47 +338,42 @@ $(function () {
 //For horinav
 
 
-function horiNav(type) {
+function horiNav(type,offset) {
     var hori = $(".horinav__list");
     var horiActive = hori.find(".active").eq(0);
 
     // defind width
     var wContainer = $(".horinav").width(); //ob
     var wActive = horiActive.width(); //a1a2
-    var wLeftActive = horiActive.offset().left; //a0a1
-    var wRightActive = wLeftActive + wActive; //a0a2
+    var wScrollLeft = hori.scrollLeft();
+    var wLeftActive = horiActive.offset().left +wScrollLeft; //a0a1 = Oa1
+    var wRightActive = wLeftActive + wActive; //a0a2 = Oa2
     var wMargin = hori.offset().left;
     var x;
 
+
     switch (type) { 
-        case 'center': 
-            if(wRightActive <= (wContainer + wActive)/2){
-                hori.addClass("visible");
-                console.log("Ko lam j them");
-                break;
-            }
-            x = wLeftActive - (wContainer - wActive)/2 - wMargin;;
-            hori.addClass("visible").scrollLeft(x);
-            break;
         case 'left': 
-            x = wLeftActive - wMargin;
-            hori.addClass("visible").scrollLeft(x);
+            x = wLeftActive - wMargin - offset;
+            hori.addClass("visible").animate( { scrollLeft: x }, 200);
             break;
         case 'right': 
-            if(wRightActive <= wContainer){
-                hori.addClass("visible");
-                console.log("Ko lam j them");
-                break;		
-            }
-            x = wLeftActive - (wContainer - wActive);
-             hori.addClass("visible").scrollLeft(x);
+            x = wLeftActive - (wContainer - wActive - offset);
+             hori.addClass("visible").animate( { scrollLeft: x }, 200);
             break;
         default:
-            alert('Nobody Wins!');
+      
+            x = wLeftActive - (wContainer - wActive)/2 - wMargin;
+            hori.addClass("visible").animate( { scrollLeft: x }, 200);
+            break;
     }
-
 }
 
-horiNav("center");
+$(".horinav__item").click(function(e){
+    e.preventDefault();
+    $(this).addClass("active").siblings().removeClass("active");
+    horiNav("center");
+});
 
+horiNav("center");
 
