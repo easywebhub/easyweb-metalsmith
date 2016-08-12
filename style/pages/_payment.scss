@@ -26,7 +26,7 @@
       width: 30px;
       line-height: 30px;
       display: block;
-      font-size: 13px;
+      font-size: rem-calc(13);
       color: $white;
       background: $medium-gray;
       border-radius: 50%;
@@ -149,7 +149,7 @@
   background: $color-orange;
   color: white;
   margin-right: 5px;
-  font-size: rem-calc(12px);
+  font-size: rem-calc(12);
 }
 .formDathang__title{
   display: flex;
@@ -197,7 +197,7 @@
     flex: 1;
   }
   a{
-    font-size: rem-calc(18px);
+    font-size: rem-calc(18);
     padding: 0.51em 1em;
     margin-left: 7px;
     margin-bottom: 0;

@@ -74,12 +74,12 @@
 }
 .comment-date{
   color: $dark-gray;
-  font-size: 12px;
+  font-size: rem-calc(12);
   margin-bottom: 5px;
 }
 .comment-meta{
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: rem-calc(13);
   input,textarea{
     margin: 0 0 0.5rem;
   }
@@ -111,7 +111,7 @@
   background:transparent;
   a{
     color: $secondary-color;
-    font-size: rem-calc(13px);
+    font-size: rem-calc(13);
   }
 }
 

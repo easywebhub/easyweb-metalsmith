@@ -44,7 +44,8 @@
 .item__image{
   text-align: center;
   padding: 0 10px;
-  margin-bottom: 15px;
+  max-width: 200px;
+    margin: 0 auto 15px;
   .embed-responsive-item{
     background: $color-border2;
 
@@ -62,12 +63,13 @@
 
 .item__price{
 
-  @include breakpoint(500px down){
-    font-size: 14px;
-  }
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   @include breakpoint(320px down) {
-    font-size: 13px;
+    font-size: rem-calc(13);
   }
 }
 .item__price--new{
@@ -88,14 +90,13 @@
     color: $color-orange;
   }
 
-  @include breakpoint(500px down){
     font-size: 13px;
-  }
 
   @include breakpoint(320px down) {
     font-size: 12px;
   }
 }
+
 
 .product__image{
   height: 110px;
@@ -358,7 +359,7 @@
 
   @include header-size(h3);
   .tietkiem{
-    font-size: rem-calc(14px);
+    font-size: rem-calc(14);
   }
 }
 

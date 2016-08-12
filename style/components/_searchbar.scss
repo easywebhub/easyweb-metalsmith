@@ -19,7 +19,7 @@
 
 .searchbar__submit{
   position: absolute;
-  top: 1px;
+  top: 2px;
   right: 1px;
   a{
     color: $black;
@@ -27,10 +27,10 @@
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
     display: block;
-    height: 35px;
-    width: 42px;
+    padding: 0 11px;
+    height: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: rem-calc(18);
     line-height: 38px;
     border-left: 1px solid $medium-gray;
 
@@ -76,7 +76,7 @@
   }
 
   .price {
-    font-size: 12px;
+    font-size: rem-calc(12);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

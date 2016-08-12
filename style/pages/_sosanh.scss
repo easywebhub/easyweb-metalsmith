@@ -16,7 +16,7 @@
     border: 5px solid $light-gray;
     line-height: 110px;
     text-align: center;
-    font-size: 50px;
+    font-size: rem-calc(50);
     color: $light-gray;
     margin: 0 auto 15px;
   }
@@ -44,7 +44,7 @@
   li{
     a{
       display: block;
-      font-size: rem-calc(14px);
+      font-size: rem-calc(14);
       padding: 7px 10px;
       border: 1px solid $light-gray;
       border-bottom: none;
@@ -101,7 +101,7 @@
   padding-bottom: 10px;
   @include header-size(h6);
   color: $dark-gray;
-  font-size: rem-calc(14px);
+  font-size: rem-calc(14);
   >div{
     padding: 0 10px;
   }
@@ -111,7 +111,7 @@
   a{
     display: block;
     padding: 10px 0;
-    font-size: rem-calc(14px);
+    font-size: rem-calc(14);
     color: $dark-gray;
 
     &:hover{

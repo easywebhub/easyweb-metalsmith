@@ -30,7 +30,7 @@
   }
   .item__sale{
       @include breakpoint(320px down) {
-        font-size: 13px;
+        font-size: rem-calc(13);
       }
   }
 }

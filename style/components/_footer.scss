@@ -1,62 +1,69 @@
 /*NHAN TIN KHUYEN MAI*/
-.nhan-tin-km{
+
+.nhan-tin-km {
   padding: 10px 0 20px;
-  input{
+  input {
     margin-bottom: 0;
   }
-  a{
-    font-size: rem-calc(18px);
+  a {
+    font-size: rem-calc(18);
     padding: 0.51em 1em;
     margin-left: 7px;
     margin-bottom: 0;
-
-
-    &:hover, &:active, &:focus{
-
-    }
+    &:hover,
+    &:active,
+    &:focus {}
   }
 }
 
-.footer--menu{
+
+.footer--menu {
   border-bottom: 1px solid $color-border1;
   background: white;
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
 
-.footer--menu--item{
+.footer--menu--item {
   background: $light-gray;
-  font-size: 11px;
+  font-size: rem-calc(11);
   text-align: center;
   padding: 10px 3px 5px;
   border-radius: $global-radius;
   position: relative;
   margin: 0 5px 10px;
-  i{
+  i {
     display: block;
-    font-size: 22px;
+    font-size: rem-calc(22);
     margin: 0 auto 5px;
+  }
+
+  @include breakpoint(medium){
+     font-size: rem-calc(13);
+     i{
+       font-size: rem-calc(25);
+     }
   }
 }
 
-.call-btn{
+.call-btn {
   color: $color-red;
-  font-size: 17px;
+  font-size: rem-calc(17);
   vertical-align: middle;
   padding: 5px 15px;
   border-radius: 20px;
   display: inline-block;
   border: 1px solid $light-gray;
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 230, 1) 100%);
   margin-bottom: 10px;
-  i{
-    font-size: 23px;
+  i {
+    font-size: rem-calc(23);
     vertical-align: -18%;
   }
 }
 
-.vcare-box-question{
+.vcare-box-question {
   display: flex;
-  > *{
-    flex : 0 0 auto;
+  > * {
+    flex: 0 0 auto;
   }
 }

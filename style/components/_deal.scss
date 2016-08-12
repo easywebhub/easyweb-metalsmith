@@ -24,10 +24,13 @@
 
 /*DEAL HOMEPAGE*/
 .deal-intro{
+  .item{
+    max-width: 307px;
+  }
 }
 
 .deal-intro--title{
-  height: 65px;
+  height: 80px;
 }
 
 /*end DEAL HOMEPAGE*/
@@ -36,6 +39,9 @@
 
 .santhuong-intro{
   border-top: 1px solid $color-border1;
+  .item__name{
+    text-align: center;
+  }
 }
 
 
