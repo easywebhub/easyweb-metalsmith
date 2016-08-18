@@ -56,6 +56,12 @@
 .item__name{
   min-height: 36px;
   line-height: 1.2rem;
+  
+  margin-bottom: 3px;
+  @include breakpoint(medium){
+    margin-bottom: 5px;
+  }
+
   a{
     color: $secondary-color;
   }
