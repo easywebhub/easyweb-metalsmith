@@ -195,7 +195,17 @@ if ($('.countdown').length) {
             removeOverlay();
         })
     });
+
+    
 })();
+
+function openPopover(des){
+    if (!$('[data-popover="' + des + '"]').length == 0) {
+        $('[data-popover="' + des + '"]').click();
+    }
+}
+
+
 
 // Load video
 
