@@ -34,8 +34,33 @@
     overflow: hidden;
   }
 
+  &.style1{
+    color: $alert-color;
+
+    .name{
+      padding-bottom: 10px;
+      display: inline-block;
+      position: relative;
+      font-size: 18px;
+      margin-bottom: 0;
+      &:after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: -1px;
+        width: 140px;
+        background-color: $primary-color;
+        height: 2px;
+      }
+    }
+  }
+
 }
 
+.popover_paragraph{
+  padding: 0 $global-padding;
+}
 
 .popover__content{
   position: relative;
