@@ -148,11 +148,16 @@ if ($('.countdown').length) {
     var main = $("#panel");
     var scrollPosition = $(window).scrollTop();
 
+    var haskclick = true;
+
     $(".popover-trigger").each(function () {
         var $this = $(this);
         var id = $this.attr('data-popover'),
             popover = $("#" + id),
             close = popover.find(".popover__close");
+
+
+
 
         function removeOverlay() {
             popover.addClass("popover-visuallyhidden");
@@ -171,6 +176,9 @@ if ($('.countdown').length) {
 
         $this.click(function (e) {
             e.preventDefault();
+            window.location.hash = id;
+            haskclick = false;
+
             scrollPosition = $(window).scrollTop();
 
             // main.css("display", "none");
@@ -193,17 +201,29 @@ if ($('.countdown').length) {
         close.click(function (e) {
             e.preventDefault();
             removeOverlay();
-        })
+        });
+
     });
 
-    
+    //activate tab if tab id provided in the URL
+    if (encodeURI(location.hash) && haskclick) {
+        var des = encodeURI(location.hash.substr(1));
+        if (!$('[data-popover="' + des + '"]').length == 0) {
+            $('[data-popover="' + des + '"]').click();
+        }
+    }
+
+
 })();
 
+
+/*
 function openPopover(des){
     if (!$('[data-popover="' + des + '"]').length == 0) {
         $('[data-popover="' + des + '"]').click();
     }
 }
+*/
 
 
 

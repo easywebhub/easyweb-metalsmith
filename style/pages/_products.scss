@@ -247,6 +247,10 @@
     text-transform: uppercase;
     color: $black;
 
+    &.normal{
+      text-transform: none;
+    }
+
     i{
       min-width: 25px;
       display: inline-block;
@@ -325,6 +329,8 @@
 
 
 }
+
+
 
 
 
