@@ -539,6 +539,8 @@
 .itemFilter__checkbox{
   display: flex;
   padding: 10px;
+
+  -webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;
   .title{
     color: $primary-color;
     font-weight: bold;
