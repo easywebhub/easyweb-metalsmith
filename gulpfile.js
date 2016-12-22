@@ -98,7 +98,11 @@ function sass() {
     }
 
     if (PROD) {
-        task = task.pipe($.cssnano({autoprefixer: false}));
+        task = task.pipe($.cssnano({autoprefixer: false,
+            discardComments: {
+                removeAll: true
+            }
+        }));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
